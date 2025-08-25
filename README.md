@@ -1,6 +1,6 @@
 # 🎬 Visual Vanguard Media - Multimedia Portfolio
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.0-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC)
@@ -115,18 +115,21 @@ Customize colors and styling in:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**This project is proprietary software** - see the [LICENSE](LICENSE) file for complete terms.
 
-**Important**: The MIT license applies to the source code only. All multimedia content, including videos, images, and portfolio materials, remains the exclusive property of Visual Vanguard Media and respective clients.
+**All Rights Reserved**: This code, design, content, and business information is the exclusive property of Visual Vanguard Media. Unauthorized copying, distribution, or commercial use is strictly prohibited.
 
-## 🤝 Contributing
+**Portfolio Use Only**: This repository is available for portfolio demonstration and technical assessment purposes only.
 
-While this is a portfolio project, contributions for improvements are welcome:
+## 🚫 Usage Restrictions
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+**This code may NOT be:**
+- Copied or redistributed
+- Used for commercial purposes
+- Modified or used as a template
+- Used to create competing services
+
+**For licensing inquiries**, contact Visual Vanguard Media directly.
 
 ## 📞 Contact
 

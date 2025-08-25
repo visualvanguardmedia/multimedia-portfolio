@@ -1,35 +1,48 @@
-MIT License
+# Proprietary License
 
-Copyright (c) 2025 Visual Vanguard Media
+Copyright (c) 2025 Visual Vanguard Media. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Terms of Use
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+This software and all associated files, including but not limited to source code, 
+documentation, design assets, multimedia content, and business information 
+(collectively, the "Software"), are the exclusive property of Visual Vanguard Media.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### Restrictions
+
+**YOU MAY NOT:**
+- Copy, modify, distribute, or reproduce any part of this Software
+- Use this Software for commercial purposes
+- Create derivative works based on this Software
+- Reverse engineer, decompile, or disassemble this Software
+- Remove or modify any copyright notices or proprietary markings
+- Use the Visual Vanguard Media name, logo, or branding
+
+### Limited Viewing Rights
+
+This repository is made available solely for:
+- Portfolio demonstration purposes
+- Technical review by potential clients or employers
+- Code quality assessment for hiring purposes
+
+### Content Protection
+
+All multimedia content, including videos, images, testimonials, client work, 
+business information, and portfolio materials, remains the exclusive intellectual 
+property of Visual Vanguard Media and respective clients. No rights to this 
+content are granted under any circumstances.
+
+### Enforcement
+
+Any unauthorized use of this Software may result in legal action. Visual Vanguard 
+Media reserves the right to pursue all available legal remedies for any 
+infringement of these terms.
+
+### Contact
+
+For licensing inquiries or permissions, contact Visual Vanguard Media directly 
+through the official portfolio website.
 
 ---
 
-## Content Rights Notice
-
-The multimedia content, including but not limited to videos, images, testimonials, 
-and portfolio materials showcased in this application, remains the exclusive 
-property of Visual Vanguard Media and its respective clients. This license 
-applies only to the source code and does not grant any rights to the multimedia 
-content displayed within the application.
-
-All portfolio videos, client work, and associated materials are protected by 
-copyright and are used here solely for demonstration purposes of the website 
-functionality.
+**This is proprietary software. Unauthorized copying or distribution is strictly prohibited.**
