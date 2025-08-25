@@ -102,18 +102,41 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
               iframeClassName="w-full h-full"
             />
           ) : video.platform === 'instagram' && video.instagramUrl ? (
-            <div className="w-full h-full flex items-center justify-center bg-slate-800">
-              <div className="text-center p-8">
-                <div className="text-6xl mb-4">📷</div>
-                <h3 className="text-xl font-semibold text-white mb-2">Instagram Reel</h3>
-                <p className="text-slate-300 mb-6">This Instagram reel can be viewed directly on Instagram.</p>
-                <Button
-                  variant="primary"
-                  onClick={() => window.open(video.instagramUrl, '_blank')}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  View on Instagram
-                </Button>
+            <div className="relative w-full h-full bg-slate-800">
+              {/* Instagram Reel Preview with Thumbnail */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${video.thumbnail})`,
+                }}
+              />
+              
+              {/* Instagram Play Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  {/* Instagram Icon */}
+                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 rounded-xl flex items-center justify-center mb-4 mx-auto shadow-2xl">
+                    <div className="w-12 h-12 border-3 border-white rounded-lg flex items-center justify-center">
+                      <div className="w-3 h-3 border-2 border-white rounded-full"></div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-2 drop-shadow-lg">Instagram Reel</h3>
+                  <p className="text-slate-200 mb-6 drop-shadow text-sm">Click to view on Instagram</p>
+                  
+                  <Button
+                    variant="primary"
+                    onClick={() => window.open(video.instagramUrl, '_blank')}
+                    className="shadow-lg hover:shadow-xl"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Watch on Instagram
+                  </Button>
+                  
+                  <p className="text-slate-300 text-xs mt-3 opacity-75">
+                    Duration: {video.duration}
+                  </p>
+                </div>
               </div>
             </div>
           ) : (
