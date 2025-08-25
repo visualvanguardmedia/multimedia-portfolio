@@ -53,19 +53,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@visualvanguardmedia.com',
-      href: 'mailto:hello@visualvanguardmedia.com'
+      value: 'jim@visualvanguardmedia.com',
+      href: 'mailto:jim@visualvanguardmedia.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '952-270-5165',
+      href: 'tel:+19522705165'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Available Worldwide',
+      value: 'Available across the United States, central to St. Paul, Minnesota',
       href: null
     }
   ];
@@ -120,15 +120,15 @@ const Contact: React.FC = () => {
                     variants={fadeInUp}
                     className="flex items-center gap-4"
                   >
-                    <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 bg-teal-600/20 rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-teal-400" />
                     </div>
                     <div>
                       <div className="text-slate-400 text-sm">{info.label}</div>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-white text-lg hover:text-blue-400 transition-colors"
+                          className="text-white text-lg hover:text-teal-400 transition-colors"
                         >
                           {info.value}
                         </a>
@@ -228,7 +228,7 @@ const Contact: React.FC = () => {
                     <input
                       {...register('name', { required: 'Name is required' })}
                       type="text"
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors"
                       placeholder="Your full name"
                     />
                     {errors.name && (
@@ -249,7 +249,7 @@ const Contact: React.FC = () => {
                         }
                       })}
                       type="email"
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors"
                       placeholder="your@email.com"
                     />
                     {errors.email && (
@@ -265,7 +265,7 @@ const Contact: React.FC = () => {
                   <input
                     {...register('subject', { required: 'Subject is required' })}
                     type="text"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors"
                     placeholder="Project inquiry, quote request, etc."
                   />
                   {errors.subject && (
@@ -280,7 +280,7 @@ const Contact: React.FC = () => {
                     </label>
                     <select
                       {...register('projectType')}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors"
                     >
                       <option value="">Select project type</option>
                       <option value="documentary">Documentary</option>
@@ -297,7 +297,7 @@ const Contact: React.FC = () => {
                     </label>
                     <select
                       {...register('budget')}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors"
                     >
                       <option value="">Select budget range</option>
                       <option value="under-5k">Under $5,000</option>
@@ -314,7 +314,7 @@ const Contact: React.FC = () => {
                   </label>
                   <select
                     {...register('timeline')}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors"
                   >
                     <option value="">Select timeline</option>
                     <option value="asap">ASAP (Rush)</option>
@@ -331,7 +331,7 @@ const Contact: React.FC = () => {
                   <textarea
                     {...register('message', { required: 'Message is required' })}
                     rows={5}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-y"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors resize-y"
                     placeholder="Tell us about your project, vision, and any specific requirements..."
                   />
                   {errors.message && (

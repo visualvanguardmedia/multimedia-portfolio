@@ -19,12 +19,12 @@ const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-teal-900/20 to-orange-900/20" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute top-20 left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-20 left-20 w-64 h-64 bg-teal-500/12 rounded-full blur-3xl"
           animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-20 w-80 h-80 bg-orange-500/12 rounded-full blur-3xl"
           animate={{
             x: [0, -100, 0],
             y: [0, 50, 0],
@@ -45,6 +45,18 @@ const Hero: React.FC = () => {
             duration: 25,
             repeat: Infinity,
             ease: "linear"
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 right-1/3 w-48 h-48 bg-teal-400/8 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
           }}
         />
       </div>
@@ -58,7 +70,7 @@ const Hero: React.FC = () => {
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Visual{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-teal-400 to-orange-400 bg-clip-text text-transparent">
               Vanguard
             </span>
           </h1>
@@ -103,8 +115,8 @@ const Hero: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
           <div className="text-center">
-            <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <Video className="w-6 h-6 text-blue-400" />
+            <div className="w-12 h-12 bg-teal-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Video className="w-6 h-6 text-teal-400" />
             </div>
             <div className="text-3xl font-bold text-white mb-1">
               {companyMetrics.projectsCompleted}+
@@ -113,8 +125,8 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <Users className="w-6 h-6 text-green-400" />
+            <div className="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Users className="w-6 h-6 text-emerald-400" />
             </div>
             <div className="text-3xl font-bold text-white mb-1">
               {companyMetrics.clientSatisfaction}
@@ -123,8 +135,8 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <Award className="w-6 h-6 text-purple-400" />
+            <div className="w-12 h-12 bg-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Award className="w-6 h-6 text-amber-400" />
             </div>
             <div className="text-3xl font-bold text-white mb-1">
               {companyMetrics.yearsExperience}+
