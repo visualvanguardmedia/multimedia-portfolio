@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Video, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { smoothScrollTo } from '@/lib/utils';
 
@@ -43,15 +44,22 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Video className="w-6 h-6 text-white" />
+          <button 
+            onClick={() => handleNavClick('#hero')}
+            className="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-teal-500 rounded-lg p-1 -m-1 group"
+            aria-label="Go to homepage"
+          >
+            <div className="relative h-10 w-auto">
+              <Image
+                src="/logos/visual-vanguard-logo.svg"
+                alt="Visual Vanguard Media Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto brightness-0 invert group-hover:scale-105 transition-transform"
+                priority
+              />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-white">Visual Vanguard</span>
-              <span className="text-xs text-slate-400">Multimedia Production</span>
-            </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -59,7 +67,7 @@ const Header: React.FC = () => {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="text-slate-300 hover:text-blue-400 transition-colors font-medium focus:outline-none focus:text-blue-400"
+                className="text-slate-300 hover:text-teal-400 transition-colors font-medium focus:outline-none focus:text-teal-400"
               >
                 {item.label}
               </button>
@@ -79,7 +87,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden w-10 h-10 flex items-center justify-center text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg"
+            className="md:hidden w-10 h-10 flex items-center justify-center text-white hover:text-teal-400 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 rounded-lg"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -99,7 +107,7 @@ const Header: React.FC = () => {
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-slate-300 hover:text-blue-400 transition-colors font-medium text-left focus:outline-none focus:text-blue-400"
+                  className="text-slate-300 hover:text-teal-400 transition-colors font-medium text-left focus:outline-none focus:text-teal-400"
                 >
                   {item.label}
                 </button>

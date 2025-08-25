@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Play, Award, Users, Video } from 'lucide-react';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { companyMetrics } from '@/data/portfolio';
 import { smoothScrollTo } from '@/lib/utils';
@@ -68,12 +69,25 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Visual{' '}
-            <span className="bg-gradient-to-r from-teal-400 to-orange-400 bg-clip-text text-transparent">
-              Vanguard
-            </span>
-          </h1>
+          {/* Logo */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-8 flex justify-center"
+          >
+            <div className="relative h-16 md:h-20 w-auto">
+              <Image
+                src="/logos/visual-vanguard-logo.svg"
+                alt="Visual Vanguard Media"
+                width={280}
+                height={80}
+                className="h-16 md:h-20 w-auto brightness-0 invert drop-shadow-lg"
+                priority
+              />
+            </div>
+          </motion.div>
+          
           <p className="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto">
             Multimedia Production Excellence
           </p>
