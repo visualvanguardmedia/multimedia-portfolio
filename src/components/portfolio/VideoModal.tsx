@@ -1,0 +1,181 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { X, ExternalLink } from 'lucide-react';
+import YouTube, { YouTubeProps } from 'react-youtube';
+import { PortfolioVideo } from '@/types';
+import Button from '@/components/ui/Button';
+interface VideoModalProps {
+  video: PortfolioVideo | null;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose]);
+
+  useEffect(() => {
+    if (video) {
+      setIsLoading(true);
+    }
+  }, [video]);
+
+  const onReady: YouTubeProps['onReady'] = () => {
+    setIsLoading(false);
+  };
+
+  const opts: YouTubeProps['opts'] = {
+    width: '100%',
+    height: '100%',
+    playerVars: {
+      autoplay: 1,
+      modestbranding: 1,
+      rel: 0,
+      showinfo: 0,
+    },
+  };
+
+  if (!isOpen || !video) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Backdrop */}
+      <div 
+        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      
+      {/* Modal */}
+      <div 
+        className="relative w-full max-w-6xl mx-4 bg-slate-900 rounded-xl shadow-2xl border border-slate-700"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="video-title"
+      >
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          className="absolute -top-4 -right-4 z-10 w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+          aria-label="Close video modal"
+        >
+          <X className="w-5 h-5 text-white" />
+        </button>
+
+        {/* Video player */}
+        <div className="relative aspect-video rounded-t-xl overflow-hidden bg-black">
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-slate-800">
+              <div className="flex items-center space-x-2">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                <span className="text-slate-300">Loading video...</span>
+              </div>
+            </div>
+          )}
+          <YouTube
+            videoId={video.youtubeId}
+            opts={opts}
+            onReady={onReady}
+            className="w-full h-full"
+            iframeClassName="w-full h-full"
+          />
+        </div>
+
+        {/* Video details */}
+        <div className="p-6">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+            <div className="flex-1">
+              <h2 id="video-title" className="text-2xl font-bold text-white mb-2">
+                {video.title}
+              </h2>
+              
+              <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-4">
+                <span className="bg-blue-600/20 px-3 py-1 rounded-full text-blue-400">
+                  {video.category}
+                </span>
+                <span>{video.role}</span>
+                {video.client && <span>Client: {video.client}</span>}
+                <span>{video.year}</span>
+              </div>
+
+              <p className="text-slate-300 leading-relaxed mb-4">
+                {video.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {video.technologies.map((tech, index) => (
+                  <span 
+                    key={index}
+                    className="px-2 py-1 bg-slate-800 text-slate-300 rounded-md text-xs"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {video.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {video.tags.map((tag, index) => (
+                    <span 
+                      key={index}
+                      className="px-2 py-1 bg-slate-700/50 text-slate-400 rounded-md text-xs"
+                    >
+                      #{tag.replace(/\s+/g, '')}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => window.open(video.youtubeUrl, '_blank')}
+                className="whitespace-nowrap"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View on YouTube
+              </Button>
+              
+              {video.testimonial && (
+                <div className="mt-4 p-4 bg-slate-800/50 rounded-lg border border-slate-600 max-w-md">
+                  <blockquote className="text-slate-300 text-sm italic mb-2">
+                    &ldquo;{video.testimonial.quote}&rdquo;
+                  </blockquote>
+                  <cite className="text-slate-400 text-xs not-italic">
+                    — {video.testimonial.name}, {video.testimonial.role}
+                    <br />
+                    {video.testimonial.company}
+                  </cite>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VideoModal;
