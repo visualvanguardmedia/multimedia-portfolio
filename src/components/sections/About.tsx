@@ -61,13 +61,13 @@ const About: React.FC = () => {
             variants={fadeInUp}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            About Visual Vanguard
+            About Jim Elli
           </motion.h2>
           <motion.p 
             variants={fadeInUp}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
           >
-            We are a full-service multimedia production company dedicated to bringing your vision to life 
+            I&apos;m a passionate MultiMedia Producer dedicated to bringing your vision to life 
             through exceptional storytelling and technical excellence.
           </motion.p>
           <motion.p 
@@ -75,7 +75,7 @@ const About: React.FC = () => {
             className="text-lg text-slate-400 max-w-2xl mx-auto"
           >
             With over {companyMetrics.yearsExperience} years of experience and {companyMetrics.projectsCompleted}+ successful projects, 
-            we specialize in documentary production, commercial content, creative films, and podcast creation.
+            I specialize in documentary production, commercial content, creative films, and podcast creation through Visual Vanguard Media.
           </motion.p>
         </motion.div>
 
@@ -171,12 +171,12 @@ const About: React.FC = () => {
           className="text-center mt-16"
         >
           <blockquote className="text-2xl md:text-3xl font-light text-slate-300 italic max-w-4xl mx-auto">
-            &ldquo;We believe every story deserves to be told with cinematic excellence. 
-            Our mission is to transform your vision into compelling visual narratives 
+            &ldquo;I believe every story deserves to be told with cinematic excellence. 
+            My mission is to transform your vision into compelling visual narratives 
             that inspire, inform, and impact your audience.&rdquo;
           </blockquote>
           <cite className="block text-slate-400 mt-6 not-italic">
-            — Visual Vanguard Media Team
+            — Jim Elli, MultiMedia Producer
           </cite>
         </motion.div>
       </div>

@@ -69,28 +69,58 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          {/* Logo */}
+          {/* Profile Image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-6 flex justify-center"
+          >
+            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-teal-500/30 shadow-2xl">
+              <Image
+                src="/images/profile/jim-profile-placeholder.svg"
+                alt="Jim Elli - MultiMedia Producer"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </motion.div>
+
+          {/* Name and Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mb-6"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+              Jim Elli
+            </h1>
+            <p className="text-xl md:text-2xl text-teal-400 font-medium mb-4">
+              MultiMedia Producer
+            </p>
+          </motion.div>
+
+          {/* Logo */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-8 flex justify-center"
           >
-            <div className="relative h-16 md:h-20 w-auto">
+            <div className="relative h-12 md:h-16 w-auto">
               <Image
                 src="/logos/visual-vanguard-logo.svg"
                 alt="Visual Vanguard Media"
-                width={280}
-                height={80}
-                className="h-16 md:h-20 w-auto brightness-0 invert drop-shadow-lg"
+                width={240}
+                height={64}
+                className="h-12 md:h-16 w-auto brightness-0 invert drop-shadow-lg opacity-80"
                 priority
               />
             </div>
           </motion.div>
           
-          <p className="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto">
-            Multimedia Production Excellence
-          </p>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Professional video production, cinematography, and color grading services 
             that elevate your story and captivate your audience.

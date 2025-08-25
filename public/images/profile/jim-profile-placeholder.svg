@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#0F172A"/>
+  <circle cx="100" cy="80" r="30" fill="#14B8A6"/>
+  <path d="M60 150C60 130 78 120 100 120C122 120 140 130 140 150V170H60V150Z" fill="#14B8A6"/>
+  <text x="100" y="190" text-anchor="middle" fill="#64748B" font-family="system-ui" font-size="12">Jim Elli</text>
+</svg>

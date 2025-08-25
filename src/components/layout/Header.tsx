@@ -43,19 +43,36 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo and Name */}
           <button 
             onClick={() => handleNavClick('#hero')}
             className="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-teal-500 rounded-lg p-1 -m-1 group"
             aria-label="Go to homepage"
           >
-            <div className="relative h-10 w-auto">
+            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-teal-500/30">
+              <Image
+                src="/images/profile/jim-profile-placeholder.svg"
+                alt="Jim Elli"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform"
+                priority
+              />
+            </div>
+            <div className="hidden sm:flex flex-col items-start">
+              <span className="text-white font-semibold text-sm leading-tight group-hover:text-teal-400 transition-colors">
+                Jim Elli
+              </span>
+              <span className="text-slate-400 text-xs leading-tight">
+                MultiMedia Producer
+              </span>
+            </div>
+            <div className="relative h-8 w-auto ml-2">
               <Image
                 src="/logos/visual-vanguard-logo.svg"
                 alt="Visual Vanguard Media Logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto brightness-0 invert group-hover:scale-105 transition-transform"
+                width={80}
+                height={32}
+                className="h-8 w-auto brightness-0 invert opacity-70 group-hover:scale-105 transition-transform"
                 priority
               />
             </div>
