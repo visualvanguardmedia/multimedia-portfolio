@@ -87,18 +87,40 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
           {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-slate-800">
               <div className="flex items-center space-x-2">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500"></div>
                 <span className="text-slate-300">Loading video...</span>
               </div>
             </div>
           )}
-          <YouTube
-            videoId={video.youtubeId}
-            opts={opts}
-            onReady={onReady}
-            className="w-full h-full"
-            iframeClassName="w-full h-full"
-          />
+          
+          {video.platform === 'youtube' && video.youtubeId ? (
+            <YouTube
+              videoId={video.youtubeId}
+              opts={opts}
+              onReady={onReady}
+              className="w-full h-full"
+              iframeClassName="w-full h-full"
+            />
+          ) : video.platform === 'instagram' && video.instagramUrl ? (
+            <div className="w-full h-full flex items-center justify-center bg-slate-800">
+              <div className="text-center p-8">
+                <div className="text-6xl mb-4">📷</div>
+                <h3 className="text-xl font-semibold text-white mb-2">Instagram Reel</h3>
+                <p className="text-slate-300 mb-6">This Instagram reel can be viewed directly on Instagram.</p>
+                <Button
+                  variant="primary"
+                  onClick={() => window.open(video.instagramUrl, '_blank')}
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View on Instagram
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-slate-800">
+              <p className="text-slate-400">Video unavailable</p>
+            </div>
+          )}
         </div>
 
         {/* Video details */}
@@ -151,11 +173,14 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => window.open(video.youtubeUrl, '_blank')}
+                onClick={() => window.open(
+                  video.platform === 'youtube' ? video.youtubeUrl : video.instagramUrl, 
+                  '_blank'
+                )}
                 className="whitespace-nowrap"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
-                View on YouTube
+                {video.platform === 'youtube' ? 'View on YouTube' : 'View on Instagram'}
               </Button>
               
               {video.testimonial && (

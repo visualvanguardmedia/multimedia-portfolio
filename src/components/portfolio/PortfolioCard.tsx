@@ -34,6 +34,8 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         return 'bg-purple-600/20 text-purple-400 border-purple-600/30';
       case 'Showreel':
         return 'bg-orange-600/20 text-orange-400 border-orange-600/30';
+      case 'Social Media':
+        return 'bg-teal-600/20 text-teal-400 border-teal-600/30';
       default:
         return 'bg-slate-600/20 text-slate-400 border-slate-600/30';
     }

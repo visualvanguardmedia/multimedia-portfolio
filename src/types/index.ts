@@ -2,12 +2,19 @@ export interface PortfolioVideo {
   id: string;
   title: string;
   description: string;
-  youtubeId: string;
-  youtubeUrl: string;
+  // Video source - either YouTube or Instagram
+  platform: 'youtube' | 'instagram';
+  // YouTube fields
+  youtubeId?: string;
+  youtubeUrl?: string;
+  // Instagram fields
+  instagramId?: string;
+  instagramUrl?: string;
+  // Common fields
   thumbnail: string;
   duration?: string;
   views?: string;
-  category: 'Documentary' | 'Podcast' | 'Commercial' | 'Creative' | 'Showreel';
+  category: 'Documentary' | 'Podcast' | 'Commercial' | 'Creative' | 'Showreel' | 'Social Media';
   tags: string[];
   role: string;
   technologies: string[];
