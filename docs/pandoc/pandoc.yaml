@@ -1,0 +1,21 @@
+from: markdown
+to: pdf
+standalone: true
+toc: false
+
+# Page layout
+geometry: 
+  - margin=0.75in
+  
+# PDF engine
+pdf-engine: wkhtmltopdf
+
+# Variables
+variables:
+  linkcolor: blue
+  urlcolor: blue
+  fontsize: 11pt
+  linestretch: 1.15
+  
+# Ensure proper formatting
+markdown-headings: true

@@ -1,0 +1,115 @@
+# JIM ELLI
+**Multimedia Creator/Editor & Video Production Specialist**
+Portfolio: https://multimedia-portfolio.netlify.app/ | Email: jim@visualvanguardmedia.com | Phone: 952-270-5165 | Location: Saint Paul, MN — EST/CST Remote Available
+
+## **Professional Summary**
+
+Multimedia creator with **10+ years** experience creating compelling visual narratives for mission-driven organizations and diverse audiences. Proven track record managing high-volume content production including **1200+ short-form content pieces** and documentary work. Expert in complete post-production workflows using **DaVinci Resolve** with strong collaborative leadership skills developed through **5 years** of team management.
+
+## **Core Qualifications**
+
+• **10+ years** video editing and post-production workflow management
+• High-volume content production with consistent quality standards
+• Brand-appropriate motion graphics: lower thirds, transitions, logo animations
+• Advanced color grading for diverse footage conditions and client goals
+• Team leadership experience training editors and managing distributed teams
+• Complete project management from consultation through delivery
+• Mission-driven content creation supporting important causes
+• Professional podcast and livestream production management
+
+## **Technical Skills**
+
+• **Primary Platform:** DaVinci Resolve (editing, Fusion graphics, color grading, audio engineering)
+• **Secondary Tools:** Adobe After Effects (template work, client assets), Premiere Pro
+• **Motion Graphics:** Brand-consistent lower thirds, simple transitions, logo animations
+• **Color Grading:** Advanced workflows for 8-bit to 10-bit footage across lighting conditions
+• **Audio:** Multi-track editing, podcast production, livestream audio management
+• **Equipment:** Sony A7 IV, Sony FX30 (2x), professional lighting, wireless audio systems
+• **Workflow:** Professional storage solutions, remote collaboration tools, team management
+
+## **Professional Experience**
+
+### **Founder & Lead Multimedia Creator** | Visual Vanguard Media | 2020 – Present
+
+• Lead content production for MintPress News: **2-year partnership** creating **1200+ short-form pieces** and documentary content
+• Manage bi-weekly podcast production and livestream operations as YouTube channel manager
+• Provide advanced color grading services and brand-consistent motion graphics using **DaVinci Resolve**
+• Coordinate complete project workflows from client consultation through final delivery
+• Train and manage distributed team including editors, designers, and content strategists
+
+### **Founder & Creative Director** | Zao Strength | 2018 – 2023
+
+• Built and managed multimedia production team for **5-year** powerlifting coaching business
+• Trained team members in **DaVinci Resolve** editing and color grading workflows
+• Coordinated video content, web design, and brand development across multiple platforms
+• Managed transition from solo operations to collaborative team-based production
+
+### **Senior Video Editor & Producer** | Independent Contractor | 2015 – 2020
+
+• Provided video editing and production services for diverse clients and organizations
+• Developed expertise in brand-appropriate content creation and visual storytelling
+• Built foundational skills in motion graphics, color grading, and audio production
+
+## **Key Projects**
+
+### MintPress News Content Production — Ongoing Partnership (2022–Present)
+**Role:** Content Producer, Editor, YouTube Manager
+• Produce **12 short-form reels weekly** from long-form documentary content
+• Edit and produce documentary content on global geopolitical issues
+• Manage bi-weekly podcast editing and livestream technical operations
+• Create consistent brand graphics and lower thirds using **DaVinci Resolve Fusion**
+• Collaborate with journalists and production team on narrative structure
+
+### A. Parker Garage Doors — Complete Production Project
+**Role:** Producer, Director, Cinematographer, Editor, Colorist
+• Conducted client consultation and developed creative vision for authentic business story
+• Filmed full-day installation work capturing genuine working-class craftsmanship
+• Conducted interview session to develop narrative overlay
+• Applied color grading to evoke warm, hardworking atmosphere despite challenging conditions
+• Delivered complete branded content piece emphasizing quality workmanship and dedication
+
+### Zao Strength Content Systems — 5-Year Team Leadership
+**Role:** Creative Director, Team Manager
+• Built multimedia production team for powerlifting coaching business
+• Trained team members in **DaVinci Resolve** editing and color grading workflows
+• Developed systematic content creation processes supporting business growth
+• Coordinated video, web, and social media content across multiple platforms
+• Managed transition from solo production to collaborative team environment
+
+### 2025 Multimedia Production Reel — Portfolio Showcase
+**Role:** Producer, Editor, Colorist
+• Comprehensive demonstration of video editing and post-production capabilities
+• Showcases range from documentary work to business storytelling
+• Demonstrates consistent brand-appropriate graphics and color grading approach
+
+## **Achievements & Experience**
+
+• **1200+ short-form content pieces** produced for MintPress News partnership
+• **2-year ongoing relationship** with news organization producing documentary content
+• **5 years team leadership** and training experience in multimedia production
+• Complete project management from client consultation through delivery
+• Expertise managing high-volume content production while maintaining quality standards
+• Advanced color grading capabilities working with diverse footage conditions
+• Collaborative leadership style training others in technical workflows
+
+## **Additional Qualifications**
+
+### Mission-Driven & Remote Work Experience:
+• Documentary content production for news organizations supporting social causes
+• **5+ years** managing projects remotely with distributed teams across time zones
+• Professional home studio with broadcast-quality equipment and reliable internet
+• Experience with fundraising and conversion-focused content creation
+
+### Education & Development:
+**Equivalent Professional Experience:** 10+ years comprehensive multimedia production
+• Continuous learning in emerging technologies and industry best practices
+• Ongoing education in non-profit communication and fundraising practices
+
+## **Availability**
+
+**Available immediately** for full-time remote position
+**Location:** EST/CST compatible with flexible scheduling
+**Compensation:** Aligned with range ($80K–$90K base, $90K–$100K OTE)
+**Equipment:** Complete professional multimedia production setup ready
+
+Ready to contribute to FundraiseUp's mission of revolutionizing online fundraising through compelling multimedia content that helps world-class organizations like UNICEF, The Obama Foundation, and Alzheimer's Association achieve their goals.
