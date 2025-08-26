@@ -49,30 +49,36 @@ Portfolio: https://multimedia-portfolio.netlify.app/ | Email: jim@visualvanguard
 
 ### Quick Setup
 ```bash
-# Install PDF engine (choose one):
-brew install wkhtmltopdf        # Recommended for most users
-brew install --cask mactex      # Full LaTeX (large download, more features)
+# Option 1: Use Chrome/Safari (Easiest - no installation needed)
+npm run build:pdfs  # Creates HTML files, then print to PDF manually
 
-# Generate PDFs:
-node docs/scripts/build-pdfs.js
+# Option 2: Install LaTeX for automated PDF generation
+brew install --cask mactex      # Full LaTeX (large download, best quality)
+npm run build:pdfs              # Creates PDFs automatically
 ```
 
-### Generated PDFs Location
-All PDFs are created in `dist/pdfs/` directory:
-- `Jim_Elli_Resume_Executive_Summary.pdf`
-- `Jim_Elli_Resume_FundraiseUp_Traditional.pdf`
-- `Jim_Elli_Resume_Traditional_Format.pdf`
-- `Jim_Elli_Resume_Filmless_Cinematographer.pdf`
-- `Jim_Elli_Cover_Letter_Filmless.pdf`
+### Generated Files Location
+All files are created in `dist/pdfs/` directory:
+- `Jim_Elli_Resume_Executive_Summary.html` / `.pdf`
+- `Jim_Elli_Resume_FundraiseUp_Traditional.html` / `.pdf`
+- `Jim_Elli_Resume_Traditional_Format.html` / `.pdf`
+- `Jim_Elli_Resume_Filmless_Cinematographer.html` / `.pdf`
+- `Jim_Elli_Cover_Letter_Filmless.html` / `.pdf`
+
+### Chrome/Safari Method (Recommended)
+1. Run `npm run build:pdfs` to create styled HTML files
+2. Open each HTML file in Chrome or Safari
+3. Print to PDF (Cmd+P → Save as PDF)
+4. Professional formatting with perfect typography
 
 ### Alternative PDF Generation
-If the script fails, you can generate individual PDFs:
+If you have LaTeX installed, direct PDF generation works:
 ```bash
 # Basic conversion
-pandoc "Jim_Elli_Resume_Executive_Summary.md" -o "resume.pdf" --variable geometry:margin=0.75in
+pandoc "Jim_Elli_Resume_Executive_Summary.md" -o "resume.pdf" --pdf-engine=pdflatex
 
 # With custom styling  
-pandoc "filename.md" -o "output.pdf" --variable geometry:margin=0.75in --variable fontsize=11pt --variable linestretch=1.15
+pandoc "filename.md" -o "output.pdf" --pdf-engine=pdflatex --variable geometry:margin=0.75in --variable fontsize=11pt
 ```
 
 ## 🔧 Document Editing Guidelines

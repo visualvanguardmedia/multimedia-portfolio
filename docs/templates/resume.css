@@ -1,0 +1,138 @@
+/* Resume PDF Styling */
+@page {
+  margin: 0.75in;
+  size: letter;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #333;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 1.2em 0 0.6em 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #bdc3c7;
+  padding-bottom: 0.1em;
+}
+
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 1em 0 0.4em 0;
+  color: #34495e;
+}
+
+/* Contact line styling */
+h1 + p {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #7f8c8d;
+  margin: 0.3em 0 0.8em 0;
+}
+
+h1 + p + p {
+  font-size: 10pt;
+  color: #7f8c8d;
+  margin: 0 0 1.5em 0;
+}
+
+/* Paragraphs */
+p {
+  margin: 0.6em 0;
+  text-align: justify;
+}
+
+/* Lists */
+ul {
+  margin: 0.6em 0;
+  padding-left: 1.2em;
+}
+
+li {
+  margin: 0.3em 0;
+  list-style-type: disc;
+}
+
+/* Strong/bold text */
+strong, b {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Emphasis/italic */
+em, i {
+  font-style: italic;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Prevent page breaks */
+h2, h3 {
+  page-break-after: avoid;
+}
+
+ul, ol {
+  page-break-inside: avoid;
+}
+
+/* Job title and company styling */
+h3 + p {
+  margin-top: -0.2em;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* Blockquotes for testimonials */
+blockquote {
+  font-style: italic;
+  margin: 1em 2em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #3498db;
+  background-color: #f8f9fa;
+}
+
+/* Clean print layout */
+@media print {
+  body {
+    font-size: 10pt;
+  }
+  
+  h1 {
+    font-size: 20pt;
+  }
+  
+  h2 {
+    font-size: 12pt;
+  }
+  
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}

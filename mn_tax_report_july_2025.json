@@ -1,0 +1,72 @@
+{
+  "business_info": {
+    "name": "Visual Vanguard Media",
+    "owner": "James Quintin Elli",
+    "address": "460 Wacouta St #331",
+    "city": "Saint Paul",
+    "state": "MN",
+    "zip": "55101"
+  },
+  "reporting_period": {
+    "start_date": "2025-07-01",
+    "end_date": "2025-07-31",
+    "filing_frequency": "Monthly",
+    "due_date": "2025-08-20"
+  },
+  "financial_summary": {
+    "gross_receipts": "2567.87",
+    "taxable_sales": "0.00",
+    "nontaxable_sales": "2567.50",
+    "total_expenses": "600.37"
+  },
+  "tax_calculations": {
+    "taxable_sales": "0.00",
+    "state_sales_tax_rate": 6.875,
+    "local_sales_tax_rate": 1.0,
+    "total_sales_tax_rate": 7.875,
+    "state_sales_tax": "0.00",
+    "local_sales_tax": "0.00",
+    "total_sales_tax": "0.00",
+    "use_tax": "0.79",
+    "total_tax_due": "0.79"
+  },
+  "transactions_analyzed": {
+    "income": [
+      {
+        "date": "2025-07-09",
+        "description": "VENMO CASHOUT",
+        "amount": "2567.50",
+        "type": "Video Editing Services",
+        "taxable": false
+      }
+    ],
+    "expenses": [
+      {
+        "date": "2025-07-15",
+        "description": "JAMES ELLI (U.S. Bank Checking)",
+        "amount": "100.00",
+        "type": "Business Transfer/Owner Draw"
+      },
+      {
+        "date": "2025-07-24",
+        "description": "MOONSHOT AI PTE. LTD.",
+        "amount": "10.00",
+        "type": "Business Expense - Software/AI Tools"
+      },
+      {
+        "date": "2025-07-29",
+        "description": "SQ LIDIATHELADYBARBER",
+        "amount": "48.00",
+        "type": "Personal/Business Service"
+      },
+      {
+        "date": "2025-07-31",
+        "description": "JAMES ELLI (U.S. Bank Checking)",
+        "amount": "442.00",
+        "type": "Business Transfer/Owner Draw"
+      }
+    ],
+    "deposits": [],
+    "withdrawals": []
+  }
+}

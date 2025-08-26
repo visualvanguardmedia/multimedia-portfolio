@@ -1,0 +1,154 @@
+MINNESOTA DEPARTMENT OF REVENUE
+SALES AND USE TAX RETURN
+FORM ST-1
+
+================================================================================
+
+BUSINESS INFORMATION:
+Business Name: Visual Vanguard Media
+Business Owner: James Quintin Elli
+Federal ID Number: [TO BE FILLED - Your Federal EIN]
+Minnesota Tax ID: [TO BE FILLED - Your Minnesota Sales Tax License Number]
+
+Business Address:
+460 Wacouta St #331
+Saint Paul, MN 55101
+
+County: Ramsey County
+Filing Frequency: Monthly
+
+================================================================================
+
+REPORTING PERIOD INFORMATION:
+Tax Period: July 2025
+From Date: July 1, 2025
+To Date: July 31, 2025
+Due Date: August 20, 2025
+
+================================================================================
+
+PART I - SALES TAX
+
+Line 1 - Gross Sales (All sales before deductions)............... $2,567.50
+
+Line 2 - Deductions:
+  a) Sales to other dealers for resale........................... $    0.00
+  b) Sales exempt by law (attach exemption certificates)......... $2,567.50
+  c) Other exempt sales (attach documentation)................... $    0.00
+  d) Total deductions (add lines 2a through 2c)................. $2,567.50
+
+Line 3 - Taxable Sales (Line 1 minus Line 2d)................... $    0.00
+
+Line 4 - TAX CALCULATION:
+  State Sales Tax:
+    Taxable Sales: $0.00 × 6.875% =............................ $    0.00
+  
+  Local Sales Tax (Saint Paul):
+    Taxable Sales: $0.00 × 1.000% =............................ $    0.00
+  
+  Total Sales Tax Due (State + Local)........................... $    0.00
+
+================================================================================
+
+PART II - USE TAX
+
+Line 5 - Purchases subject to use tax:
+  Out-of-state purchases/digital services....................... $   10.00
+
+Line 6 - Use Tax Calculation:
+  Use Tax: $10.00 × 7.875% =.................................... $    0.79
+
+================================================================================
+
+PART III - TOTAL TAX DUE
+
+Line 7 - Total Sales Tax (Line 4)............................... $    0.00
+Line 8 - Total Use Tax (Line 6)................................. $    0.79
+Line 9 - Total Tax Due (Line 7 + Line 8)........................ $    0.79
+
+Line 10 - Credits/Overpayments from previous periods............ $    0.00
+Line 11 - Net Tax Due (Line 9 minus Line 10)................... $    0.79
+
+================================================================================
+
+PART IV - PENALTIES AND INTEREST
+
+Line 12 - Late Filing Penalty................................... $    0.00
+Line 13 - Late Payment Penalty.................................. $    0.00
+Line 14 - Interest.............................................. $    0.00
+Line 15 - Total Penalties and Interest.......................... $    0.00
+
+================================================================================
+
+PART V - TOTAL AMOUNT DUE
+
+Line 16 - Total Amount Due (Line 11 + Line 15).................. $    0.79
+
+================================================================================
+
+PAYMENT INFORMATION:
+Make check payable to: Minnesota Department of Revenue
+Amount: $0.79
+Due Date: August 20, 2025
+
+Electronic Payment Options:
+- Online at www.revenue.state.mn.us
+- Phone: 651-296-4444
+- ACH Debit/Credit
+
+================================================================================
+
+CERTIFICATION:
+Under penalties of perjury, I declare that I have examined this return and 
+accompanying schedules and statements, and to the best of my knowledge and 
+belief, they are true, correct, and complete.
+
+Signature: _________________________________ Date: _______________
+James Quintin Elli, Owner
+Visual Vanguard Media
+
+================================================================================
+
+FILING INSTRUCTIONS:
+
+1. FILING DEADLINE: This return must be filed by August 20, 2025
+
+2. WHERE TO FILE:
+   Minnesota Department of Revenue
+   Mail Station 1320
+   St. Paul, MN 55146-1320
+
+3. ELECTRONIC FILING: Available at www.revenue.state.mn.us
+
+4. PAYMENT METHODS:
+   - Check or money order
+   - Electronic funds transfer (EFT)
+   - Credit card (processing fees apply)
+
+5. RECORD KEEPING:
+   - Keep copies of all returns and supporting documents for 3.5 years
+   - Maintain detailed sales records
+   - Keep all exemption certificates
+
+================================================================================
+
+IMPORTANT NOTES:
+
+• Video editing services are generally NOT SUBJECT to Minnesota sales tax when 
+  provided as professional services (non-tangible).
+
+• Video production and cinematography may be taxable depending on deliverables 
+  (tangible vs. service-based).
+
+• Use tax is due on out-of-state purchases of taxable items/services where 
+  sales tax was not paid.
+
+• Saint Paul imposes an additional 1.0% local sales tax on taxable sales.
+
+• Late filing penalty: 5% per month up to 25%
+• Late payment penalty: 0.5% per month up to 25%
+• Interest: Variable rate set by Minnesota Department of Revenue
+
+• For questions, contact Minnesota Department of Revenue at 651-296-6181
+
+================================================================================

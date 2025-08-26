@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "build:pdfs": "node --input-type=module docs/scripts/build-pdfs.js"
+    "build:pdfs": "node docs/scripts/build-pdfs.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

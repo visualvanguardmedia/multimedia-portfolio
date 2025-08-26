@@ -1,0 +1,162 @@
+MINNESOTA SALES TAX RETURN - SUPPORTING DOCUMENTATION
+Visual Vanguard Media - July 2025 Filing Period
+
+================================================================================
+
+DOCUMENT SUMMARY:
+1. Sales Records Analysis
+2. Use Tax Calculation Worksheet
+3. Transaction Classification Report
+4. Filing Checklist
+
+================================================================================
+
+1. SALES RECORDS ANALYSIS
+
+Based on bank statement analysis for July 1-31, 2025:
+
+INCOME SOURCES:
+Date        Description              Amount      Tax Status    Notes
+---------------------------------------------------------------------------
+2025-07-09  VENMO CASHOUT           $2,567.50    NON-TAXABLE  Payment for video
+                                                              editing services
+                                                              (professional
+                                                              services)
+
+TOTAL GROSS SALES:                  $2,567.50
+TAXABLE SALES:                      $0.00
+NON-TAXABLE SALES:                  $2,567.50
+
+CLASSIFICATION RATIONALE:
+- Venmo cashout represents payment for video editing services provided
+- Video editing services are generally NON-TAXABLE in Minnesota when provided
+  as professional services (not tangible products)
+- Per Minnesota Sales Tax Fact Sheet 102: Professional services are not taxable
+- Services performed on customer-provided materials are typically non-taxable
+
+================================================================================
+
+2. USE TAX CALCULATION WORKSHEET
+
+PURCHASES SUBJECT TO USE TAX:
+
+Date        Vendor                  Amount      Tax Rate    Use Tax Due
+---------------------------------------------------------------------------
+2025-07-24  MOONSHOT AI PTE. LTD.   $10.00     7.875%      $0.79
+
+TOTAL USE TAX DUE: $0.79
+
+RATIONALE:
+- MOONSHOT AI PTE. LTD. is a Singapore-based company providing digital services
+- Minnesota use tax applies to out-of-state digital service purchases
+- Combined tax rate: 6.875% (state) + 1.000% (Saint Paul local) = 7.875%
+
+================================================================================
+
+3. TRANSACTION CLASSIFICATION REPORT
+
+BUSINESS EXPENSES (Not subject to sales tax reporting):
+Date        Description                         Amount      Classification
+---------------------------------------------------------------------------
+2025-07-15  JAMES ELLI (U.S. Bank Transfer)    $100.00     Owner draw
+2025-07-29  U.S. BANK MICRODEPOSITS            $0.30       Bank verification
+2025-07-29  U.S. BANK MICRODEPOSITS            $0.07       Bank verification
+2025-07-29  U.S. BANK MICRODEPOSITS           -$0.07       Bank verification
+2025-07-29  U.S. BANK MICRODEPOSITS           -$0.30       Bank verification
+2025-07-29  SQ LIDIATHELADYBARBER             $48.00       Personal/Business service
+2025-07-31  JAMES ELLI (U.S. Bank Transfer)   $442.00      Owner draw
+
+TOTAL EXPENSES: $600.37
+
+NOTE: These transactions represent business operational expenses and owner 
+draws, not sales transactions subject to Minnesota sales tax.
+
+================================================================================
+
+4. FILING CHECKLIST
+
+□ BEFORE FILING:
+  □ Verify Federal EIN and Minnesota Sales Tax License numbers
+  □ Confirm business address is current with Minnesota Department of Revenue
+  □ Review all calculations for accuracy
+  □ Ensure all required fields are completed
+
+□ REQUIRED INFORMATION TO COMPLETE:
+  □ Federal EIN (Employer Identification Number)
+  □ Minnesota Sales Tax License Number
+  □ Any exempt sale certificates (if applicable)
+
+□ FILING OPTIONS:
+  □ Online filing at www.revenue.state.mn.us (recommended)
+  □ Mail to: Minnesota Department of Revenue
+            Mail Station 1320
+            St. Paul, MN 55146-1320
+
+□ PAYMENT OPTIONS:
+  □ Electronic payment (ACH, credit card) - online
+  □ Check or money order - by mail
+  □ Phone payment: 651-296-4444
+
+□ IMPORTANT DATES:
+  □ Filing Due Date: August 20, 2025
+  □ Payment Due Date: August 20, 2025
+  □ Late penalties apply after due date
+
+□ RECORD KEEPING:
+  □ Save copy of completed return
+  □ Maintain bank statements and sales records
+  □ Keep documentation for 3.5 years minimum
+
+================================================================================
+
+TAX CALCULATION SUMMARY:
+
+Gross Sales:                        $2,567.50
+Less: Exempt Sales (Video Editing)  $2,567.50
+Taxable Sales:                      $0.00
+
+Minnesota State Sales Tax (6.875%): $0.00
+Saint Paul Local Sales Tax (1.000%): $0.00
+Total Sales Tax:                    $0.00
+
+Use Tax on Out-of-State Purchases:  $0.79
+TOTAL TAX DUE:                      $0.79
+
+================================================================================
+
+COMPLIANCE NOTES:
+
+1. VIDEO EDITING SERVICES TAXATION:
+   - Video editing services are generally NON-TAXABLE in Minnesota
+   - Professional services performed on customer materials are exempt
+   - No tangible products are delivered (service-based business model)
+   - Properly classified as exempt professional services
+
+2. SAINT PAUL LOCAL TAX:
+   - Business location (460 Wacouta St, Saint Paul) would be subject to 1.0% local tax
+   - Only applies to taxable sales (none in this case)
+   - Combined rate: 7.875% (6.875% state + 1.000% local) for future taxable sales
+
+3. USE TAX OBLIGATIONS:
+   - Required on out-of-state digital service purchases
+   - Applied to MOONSHOT AI purchase ($10.00) as no sales tax was collected
+   - Use tax rate: 7.875% = $0.79
+
+4. FILING FREQUENCY:
+   - Monthly filing required based on business registration
+   - Returns due by 20th of following month
+   - Must file even with $0 sales tax (use tax still applies)
+
+================================================================================
+
+CONTACT INFORMATION:
+
+Minnesota Department of Revenue
+Sales and Use Tax Division
+Phone: 651-296-6181
+Website: www.revenue.state.mn.us
+Email: salesanduse.tax@state.mn.us
+
+Hours: Monday-Friday, 8:00 AM - 4:30 PM
+
+================================================================================

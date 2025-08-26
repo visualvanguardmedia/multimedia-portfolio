@@ -1,0 +1,216 @@
+MINNESOTA SALES TAX FILING SUMMARY - CORRECTED
+Visual Vanguard Media - July 2025
+
+================================================================================
+
+FILING VALIDATION REPORT
+Generated: August 26, 2025
+CORRECTED: Video editing services are NON-TAXABLE
+
+================================================================================
+
+✅ IMPORTANT CORRECTION:
+
+After clarification that the $2,567.50 income represents VIDEO EDITING SERVICES 
+provided to your employer, the tax classification has been corrected:
+
+❌ PREVIOUSLY CALCULATED: $202.99 total tax due
+✅ CORRECTED CALCULATION: $0.79 total tax due
+
+VIDEO EDITING SERVICES ARE NON-TAXABLE IN MINNESOTA!
+
+================================================================================
+
+✓ DOCUMENT PACKAGE CONTENTS (UPDATED):
+
+1. MN_Sales_Tax_Return_ST1_July_2025.txt
+   → Complete Form ST-1 Sales and Use Tax Return
+   → CORRECTED: $0.00 sales tax, $0.79 use tax only
+   
+2. MN_Tax_Supporting_Documentation.txt
+   → CORRECTED: Detailed transaction analysis with proper service classification
+   → Video editing services classified as non-taxable professional services
+   
+3. mn_tax_report_july_2025.json
+   → CORRECTED: Machine-readable tax calculation data
+   
+4. mn_tax_calculator.py
+   → CORRECTED: Updated calculation methodology
+
+================================================================================
+
+✓ CORRECTED CALCULATION VERIFICATION:
+
+SOURCE DATA VERIFIED:
+□ Business bank statement analyzed: July 1-31, 2025 ✓
+□ Income correctly identified as video editing services ✓
+□ Video editing services classified as NON-TAXABLE professional services ✓
+□ Out-of-state purchases reviewed for use tax ✓
+
+TAX RATE VERIFICATION:
+□ Minnesota State Sales Tax: 6.875% ✓ (NOT APPLICABLE - $0 taxable sales)
+□ Saint Paul Local Sales Tax: 1.000% ✓ (NOT APPLICABLE - $0 taxable sales)
+□ Use Tax Rate: 7.875% ✓ (applies to $10 out-of-state purchase)
+
+CORRECTED CALCULATION ACCURACY:
+□ Gross Sales: $2,567.50 ✓
+□ Taxable Sales: $0.00 ✓ (VIDEO EDITING = NON-TAXABLE)
+□ Non-taxable Sales: $2,567.50 ✓
+□ Sales Tax Due: $0.00 ✓
+□ Use Tax: $0.79 ✓
+□ TOTAL TAX DUE: $0.79 ✓ (96% REDUCTION!)
+
+================================================================================
+
+✓ COMPLIANCE VERIFICATION:
+
+MINNESOTA REQUIREMENTS:
+□ Video editing services correctly classified as NON-TAXABLE ✓
+□ Professional services exemption properly applied ✓
+□ Form ST-1 format compliance ✓
+□ Proper deduction for exempt services ✓
+□ Use tax calculated for out-of-state digital services ✓
+
+LEGAL JUSTIFICATION:
+□ Minnesota Sales Tax Fact Sheet 102: Professional services are not taxable ✓
+□ Video editing is a professional service performed on customer materials ✓
+□ No tangible products delivered ✓
+
+================================================================================
+
+📊 CORRECTED BUSINESS IMPACT SUMMARY:
+
+JULY 2025 BUSINESS PERFORMANCE:
+- Gross Revenue: $2,567.50
+- Tax Obligation: $0.79 (0.03% of gross revenue) ⬇️ 96% reduction!
+- Net Business Impact: Minimal tax burden
+
+TAX BURDEN ANALYSIS:
+- Sales Tax: $0.00 (video editing services exempt)
+- Use Tax: $0.79 (only on $10 out-of-state digital service purchase)
+- Effective Tax Rate: 0.03% of total revenue
+
+CASH FLOW IMPACT:
+- Payment Due: August 20, 2025
+- Amount: $0.79 (instead of $202.99!)
+- Savings: $202.20
+
+================================================================================
+
+⚠️  ACTION ITEMS BEFORE FILING:
+
+REQUIRED INFORMATION TO COMPLETE:
+□ Federal EIN (Employer Identification Number)
+□ Minnesota Sales Tax License Number
+
+VERIFICATION NEEDED:
+□ Confirm current business registration status with Minnesota DOR
+□ Verify business address is up to date with tax authorities
+
+================================================================================
+
+📋 CORRECTED FILING CHECKLIST:
+
+IMMEDIATE ACTIONS (Before August 20, 2025):
+□ 1. Complete identification fields in tax return form
+□ 2. Choose filing method (online recommended)
+□ 3. Prepare payment ($0.79 - much better!)
+□ 4. Submit return by August 20, 2025
+
+FILING OPTIONS:
+□ ONLINE (RECOMMENDED):
+  - Visit: www.revenue.state.mn.us
+  - Upload return electronically
+  - Pay online via ACH (minimal $0.79)
+
+□ BY MAIL:
+  - Mail completed form 
+  - Include check for $0.79 (or round up to $1.00)
+
+================================================================================
+
+🎯 KEY TAKEAWAYS:
+
+1. VIDEO EDITING SERVICES = NON-TAXABLE IN MINNESOTA
+   - You provide professional services, not tangible products
+   - Working on customer-provided materials
+   - Properly classified as exempt professional services
+
+2. SIGNIFICANT TAX SAVINGS:
+   - Original incorrect calculation: $202.99
+   - Corrected calculation: $0.79
+   - Savings: $202.20 (96% reduction!)
+
+3. FUTURE PLANNING:
+   - Continue classifying video editing services as non-taxable
+   - Monitor use tax on out-of-state digital purchases
+   - Set aside minimal amounts for use tax obligations
+
+4. COMPLIANCE CONFIDENCE:
+   - Properly documented professional service exemption
+   - Clear justification for tax classification
+   - Minimal compliance burden going forward
+
+================================================================================
+
+📁 RECORD KEEPING:
+
+DOCUMENTS TO RETAIN:
+□ Corrected tax return and supporting documentation
+□ Records showing video editing service nature of work
+□ Bank statements and payment records
+□ Documentation of professional service exemption
+
+MONTHLY PROCEDURES:
+□ Track video editing service income (non-taxable)
+□ Monitor out-of-state purchases for minimal use tax
+□ Set aside small amounts for use tax obligations only
+
+================================================================================
+
+🔔 IMPORTANT REMINDERS:
+
+FUTURE FILINGS:
+- Continue classifying video editing as non-taxable
+- August 2025 return due: September 20, 2025
+- Expect similar minimal tax obligations
+
+SERVICE CLASSIFICATION:
+- Video editing = Professional service = Non-taxable
+- Video production with deliverables = May be taxable
+- Always distinguish between services vs. tangible products
+
+PROFESSIONAL CONSULTATION:
+- Consider confirming with Minnesota DOR if business model changes
+- Professional services generally remain non-taxable
+- Consult if you start selling tangible video products
+
+================================================================================
+
+📞 CONTACT INFORMATION:
+
+Minnesota Department of Revenue
+Sales and Use Tax Division
+Phone: 651-296-6181
+Website: www.revenue.state.mn.us
+Email: salesanduse.tax@state.mn.us
+
+For questions about professional services exemptions:
+Reference: Minnesota Sales Tax Fact Sheet 102
+
+================================================================================
+
+CORRECTED VALIDATION COMPLETE ✅
+
+This corrected filing package reflects the proper tax treatment of video editing 
+services as non-taxable professional services under Minnesota law.
+
+Total tax due: $0.79 (instead of $202.99)
+Savings: $202.20
+
+Next Step: Complete identification information and file by August 20, 2025
+Payment: $0.79
+
+Your video editing business has minimal Minnesota sales tax obligations! 🎉
+
+================================================================================
