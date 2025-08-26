@@ -96,9 +96,16 @@ export const companyMetrics                        // Business metrics
 
 ## Key Features & Patterns
 
+### Mobile-Optimized Modal System
+- **MobileModalManager**: Advanced modal component with mobile-first design
+- **Scroll Lock Hook**: `useScrollLock` prevents background scroll with iOS optimizations
+- **Touch Gestures**: Swipe-to-close functionality for mobile users
+- **Focus Management**: Automatic focus trapping and restoration
+- **Accessibility**: Full ARIA support and keyboard navigation
+
 ### YouTube Integration
 - **React YouTube**: Professional video embedding with custom controls
-- **Video Modals**: Full-screen viewing experience with metadata
+- **Video Modals**: Mobile-optimized full-screen viewing experience with metadata
 - **Thumbnail Management**: Error handling for missing/broken images
 
 ### Responsive Design
@@ -163,6 +170,133 @@ export const companyMetrics                        // Business metrics
 - Lazy loading for video thumbnails
 - Efficient bundle splitting with App Router
 
+## Mobile Modal System Architecture
+
+### Core Components
+
+#### MobileModalManager (`src/components/ui/MobileModalManager.tsx`)
+A comprehensive modal wrapper designed for mobile-first experiences:
+
+```typescript
+interface MobileModalManagerProps {
+  isOpen: boolean;                    // Modal visibility state
+  onClose: () => void;                // Close callback
+  children: React.ReactNode;          // Modal content
+  enableSwipeClose?: boolean;         // Enable swipe-to-close (default: true)
+  swipeThreshold?: number;            // Swipe distance threshold (default: 150px)
+  disableBackdropClose?: boolean;     // Disable click-outside-to-close
+  modalClassName?: string;            // Custom modal styles
+  ariaLabel?: string;                 // Accessibility label
+  ariaDescribedBy?: string;          // ARIA description
+}
+```
+
+**Key Features:**
+- **Portal Rendering**: Renders outside component tree for proper z-index
+- **Focus Management**: Traps focus within modal, restores on close
+- **Touch Gestures**: Swipe down to close with velocity detection
+- **Accessibility**: Full ARIA support, keyboard navigation
+- **Animation**: Smooth enter/exit with Framer Motion
+
+#### useScrollLock Hook (`src/hooks/useScrollLock.ts`)
+Prevents background scrolling with mobile optimizations:
+
+```typescript
+interface ScrollLockOptions {
+  preventTouch?: boolean;             // Handle touch events (iOS rubber banding)
+  preserveScrollPosition?: boolean;   // Maintain scroll position
+  allowScrollTarget?: HTMLElement;    // Allow scrolling within specific element
+}
+```
+
+**Mobile Optimizations:**
+- **iOS Rubber Banding**: Fixed positioning prevents bounce scrolling
+- **Scroll Position**: Preserves and restores exact scroll position
+- **Touch Handling**: Selective touch event prevention
+- **Scrollbar Compensation**: Prevents layout shift on lock/unlock
+
+### Usage Patterns
+
+#### Basic Modal Implementation
+```typescript
+// VideoModal.tsx example
+const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
+  return (
+    <MobileModalManager
+      isOpen={isOpen}
+      onClose={onClose}
+      enableSwipeClose={true}
+      ariaLabel={video.title}
+      modalClassName="max-h-[90vh] overflow-y-auto"
+    >
+      {/* Modal content */}
+      <div className="p-6">
+        {/* Video player and details */}
+      </div>
+    </MobileModalManager>
+  );
+};
+```
+
+#### Custom Scroll Lock Usage
+```typescript
+const MyComponent = () => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const { lock, unlock } = useScrollLock({
+    preventTouch: true,
+    preserveScrollPosition: true,
+    allowScrollTarget: modalRef.current
+  });
+  
+  // Use lock() and unlock() as needed
+};
+```
+
+### Mobile-Specific CSS Classes
+
+Added to `globals.css`:
+
+```css
+/* iOS Safari optimizations */
+.momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Prevent text selection during drag gestures */
+.modal-drag-handle {
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+/* Safe area handling for notched devices */
+.safe-area-inset-top { padding-top: env(safe-area-inset-top); }
+.safe-area-inset-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; }
+}
+```
+
+### Troubleshooting Common Issues
+
+**Problem**: Modal doesn't prevent background scrolling on iOS
+**Solution**: Ensure `preventTouch: true` is set in `useScrollLock` options
+
+**Problem**: Scroll position jumps when modal opens/closes
+**Solution**: Use `preserveScrollPosition: true` and check scrollbar compensation
+
+**Problem**: Touch events interfere with modal content scrolling
+**Solution**: Set `allowScrollTarget` to the scrollable container element
+
+**Problem**: Modal appears behind other content
+**Solution**: Adjust `zIndex` prop or check CSS z-index conflicts
+
+**Problem**: Focus is lost when modal closes
+**Solution**: Ensure proper focus restoration by storing `document.activeElement`
+
 ## Common Patterns to Follow
 
 1. **Component Structure**: Use TypeScript interfaces for props, implement proper accessibility
@@ -170,3 +304,5 @@ export const companyMetrics                        // Business metrics
 3. **Styling**: Compose Tailwind classes with `cn()` utility for conditional styling
 4. **State Management**: Use local state for UI, keep portfolio data static
 5. **Error Handling**: Implement fallbacks for images, loading states for videos
+6. **Modal Usage**: Always use `MobileModalManager` for modal components, never basic overlays
+7. **Mobile Testing**: Test thoroughly on actual mobile devices, not just browser dev tools

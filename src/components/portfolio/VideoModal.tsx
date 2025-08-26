@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { X, ExternalLink } from 'lucide-react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import { PortfolioVideo } from '@/types';
 import Button from '@/components/ui/Button';
+import MobileModalManager from '@/components/ui/MobileModalManager';
 interface VideoModalProps {
   video: PortfolioVideo | null;
   isOpen: boolean;
@@ -14,27 +15,8 @@ interface VideoModalProps {
 const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen, onClose]);
-
-  useEffect(() => {
+  // Reset loading state when video changes
+  React.useEffect(() => {
     if (video) {
       setIsLoading(true);
     }
@@ -55,32 +37,26 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
     },
   };
 
-  if (!isOpen || !video) return null;
+  if (!video) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+    <MobileModalManager
+      isOpen={isOpen}
+      onClose={onClose}
+      enableSwipeClose={true}
+      id="video-modal"
+      ariaLabel={video.title}
+      ariaDescribedBy="video-modal-description"
+      modalClassName="max-h-[90vh] overflow-y-auto"
+    >
+      {/* Close button - positioned for mobile touch */}
+      <button
         onClick={onClose}
-        aria-hidden="true"
-      />
-      
-      {/* Modal */}
-      <div 
-        className="relative w-full max-w-6xl mx-4 bg-slate-900 rounded-xl shadow-2xl border border-slate-700"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="video-title"
+        className="absolute top-4 right-4 sm:-top-4 sm:-right-4 z-10 w-10 h-10 bg-slate-800/90 hover:bg-slate-700 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 backdrop-blur-sm"
+        aria-label="Close video modal"
       >
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute -top-4 -right-4 z-10 w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-          aria-label="Close video modal"
-        >
-          <X className="w-5 h-5 text-white" />
-        </button>
+        <X className="w-5 h-5 text-white" />
+      </button>
 
         {/* Video player */}
         <div className="relative aspect-video rounded-t-xl overflow-hidden bg-black">
@@ -221,8 +197,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    </MobileModalManager>
   );
 };
 
