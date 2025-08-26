@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
       description: 'Professional camera work, lighting design, and advanced color correction techniques',
       skills: ['Director of Photography', 'Color Grading', 'Visual Storytelling', 'Camera Operation'],
       videos: portfolioVideos.filter(video => 
-        ['1', '3', '5'].includes(video.id) // Showreel, FBI Interview, Powerlifting Film
+        ['1', '3', '5', '13'].includes(video.id) // Showreel, FBI Interview, Powerlifting Film, Color Grading Showcase
       )
     },
     {
@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
       description: 'Multi-camera setups, professional interviews, and long-form content production',
       skills: ['Multi-Camera Production', 'Interview Techniques', 'Documentary Filmmaking', 'Lighting Design'],
       videos: portfolioVideos.filter(video => 
-        ['3', '6'].includes(video.id) // FBI Interview, Garage Doors testimonial
+        ['3', '6', '15', '16'].includes(video.id) // FBI Interview, Garage Doors, MindBlown Podcast, Advanced Interview
       )
     },
     {
@@ -47,19 +47,19 @@ const Skills: React.FC = () => {
       description: 'Professional audio engineering, podcast production, and multi-track recording',
       skills: ['Audio Engineering', 'Podcast Production', 'Sound Design', 'Multi-track Recording'],
       videos: portfolioVideos.filter(video => 
-        ['4'].includes(video.id) // Powerlifting podcast
+        ['4', '12'].includes(video.id) // Powerlifting podcast, Professional Podcast Interview
       )
     },
     {
-      name: 'Commercial & Social Media',
+      name: 'Motion Graphics & Creative Design',
       icon: Settings,
       color: 'text-orange-400',
       bgColor: 'bg-orange-600/10',
       borderColor: 'border-orange-600/20', 
-      description: 'Brand-focused content creation, social media optimization, and marketing videos',
-      skills: ['Commercial Production', 'Social Media Content', 'Brand Storytelling', 'Content Strategy'],
+      description: 'Brand-focused content creation, motion graphics, and visual design systems',
+      skills: ['Motion Graphics', 'Brand Design', 'Creative Direction', 'Visual Effects'],
       videos: portfolioVideos.filter(video => 
-        ['6', '7', '8', '11'].includes(video.id) // Commercial + Social media content
+        ['6', '7', '8', '11', '14', '17'].includes(video.id) // Commercial + Social media + Motion Graphics + Branding
       )
     }
   ];
