@@ -51,7 +51,7 @@ const Header: React.FC = () => {
           >
             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-teal-500/30">
               <Image
-                src="/images/profile/jim-profile-placeholder.svg"
+                src="/images/profile/jim-profile-1.jpg"
                 alt="Jim Elli"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
