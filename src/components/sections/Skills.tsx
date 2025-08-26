@@ -1,73 +1,77 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Video, Headphones, Palette, Settings } from 'lucide-react';
-import { skills } from '@/data/portfolio';
-import { Skill } from '@/types';
+import { Video, Headphones, Settings } from 'lucide-react';
+import { portfolioVideos } from '@/data/portfolio';
+import { PortfolioVideo } from '@/types';
+import PortfolioCard from '@/components/portfolio/PortfolioCard';
+import VideoModal from '@/components/portfolio/VideoModal';
 
 const Skills: React.FC = () => {
+  const [selectedVideo, setSelectedVideo] = useState<PortfolioVideo | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Define skill categories with curated video examples that best demonstrate each skill
   const skillCategories = [
     {
-      name: 'Video Production',
+      name: 'Cinematography & Color Grading',
       icon: Video,
       color: 'text-blue-400',
       bgColor: 'bg-blue-600/10',
-      borderColor: 'border-blue-600/20'
+      borderColor: 'border-blue-600/20',
+      description: 'Professional camera work, lighting design, and advanced color correction techniques',
+      skills: ['Director of Photography', 'Color Grading', 'Visual Storytelling', 'Camera Operation'],
+      videos: portfolioVideos.filter(video => 
+        ['1', '3', '5'].includes(video.id) // Showreel, FBI Interview, Powerlifting Film
+      )
     },
     {
-      name: 'Audio Production',
-      icon: Headphones,
-      color: 'text-green-400',
+      name: 'Documentary & Interview Production',
+      icon: Video,
+      color: 'text-green-400', 
       bgColor: 'bg-green-600/10',
-      borderColor: 'border-green-600/20'
+      borderColor: 'border-green-600/20',
+      description: 'Multi-camera setups, professional interviews, and long-form content production',
+      skills: ['Multi-Camera Production', 'Interview Techniques', 'Documentary Filmmaking', 'Lighting Design'],
+      videos: portfolioVideos.filter(video => 
+        ['3', '6'].includes(video.id) // FBI Interview, Garage Doors testimonial
+      )
     },
     {
-      name: 'Design & Graphics',
-      icon: Palette,
+      name: 'Audio Production & Podcasting',
+      icon: Headphones,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-600/10',
-      borderColor: 'border-purple-600/20'
+      bgColor: 'bg-purple-600/10', 
+      borderColor: 'border-purple-600/20',
+      description: 'Professional audio engineering, podcast production, and multi-track recording',
+      skills: ['Audio Engineering', 'Podcast Production', 'Sound Design', 'Multi-track Recording'],
+      videos: portfolioVideos.filter(video => 
+        ['4'].includes(video.id) // Powerlifting podcast
+      )
     },
     {
-      name: 'Technical',
+      name: 'Commercial & Social Media',
       icon: Settings,
       color: 'text-orange-400',
       bgColor: 'bg-orange-600/10',
-      borderColor: 'border-orange-600/20'
+      borderColor: 'border-orange-600/20', 
+      description: 'Brand-focused content creation, social media optimization, and marketing videos',
+      skills: ['Commercial Production', 'Social Media Content', 'Brand Storytelling', 'Content Strategy'],
+      videos: portfolioVideos.filter(video => 
+        ['6', '7', '8', '11'].includes(video.id) // Commercial + Social media content
+      )
     }
   ];
 
-  const getSkillsByCategory = (categoryName: string): Skill[] => {
-    return skills.filter(skill => skill.category === categoryName);
+  const handleVideoClick = (video: PortfolioVideo) => {
+    setSelectedVideo(video);
+    setIsModalOpen(true);
   };
 
-  const SkillBar: React.FC<{ skill: Skill; index: number }> = ({ skill, index }) => {
-    return (
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: index * 0.1 }}
-        className="mb-6"
-      >
-        <div className="flex justify-between items-center mb-2">
-          <span className="text-slate-200 font-medium">{skill.name}</span>
-          <span className="text-slate-400 text-sm">{skill.level}%</span>
-        </div>
-        <div className="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: `${skill.level}%` }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5, delay: index * 0.1 + 0.3, ease: "easeOut" }}
-            className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full relative"
-          >
-            <div className="absolute inset-0 bg-white/20 animate-pulse rounded-full" />
-          </motion.div>
-        </div>
-      </motion.div>
-    );
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedVideo(null);
   };
 
   const fadeInUp = {
@@ -104,15 +108,15 @@ const Skills: React.FC = () => {
             variants={fadeInUp}
             className="text-xl text-slate-300 max-w-3xl mx-auto"
           >
-            Mastery across the full spectrum of multimedia production, 
-            from technical execution to creative vision.
+            Demonstrating mastery across the full spectrum of multimedia production 
+            through curated examples of professional work.
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        {/* Skill Categories with Video Examples */}
+        <div className="space-y-16">
           {skillCategories.map((category, categoryIndex) => {
             const IconComponent = category.icon;
-            const categorySkills = getSkillsByCategory(category.name);
             
             return (
               <motion.div
@@ -121,24 +125,51 @@ const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-                className={`${category.bgColor} ${category.borderColor} border rounded-2xl p-8 backdrop-blur-sm`}
+                className="space-y-8"
               >
-                <div className="flex items-center mb-8">
-                  <div className="w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4">
-                    <IconComponent className={`w-6 h-6 ${category.color}`} />
+                {/* Category Header */}
+                <div className={`${category.bgColor} ${category.borderColor} border rounded-2xl p-8 backdrop-blur-sm`}>
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4">
+                      <IconComponent className={`w-6 h-6 ${category.color}`} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {category.name}
+                      </h3>
+                      <p className="text-slate-300">{category.description}</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
-                    {category.name}
-                  </h3>
+                  
+                  {/* Skills List */}
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {category.skills.map((skill, skillIndex) => (
+                      <span 
+                        key={skill}
+                        className="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-md text-sm border border-slate-600"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 
-                <div className="space-y-6">
-                  {categorySkills.map((skill, skillIndex) => (
-                    <SkillBar 
-                      key={skill.name} 
-                      skill={skill} 
-                      index={skillIndex} 
-                    />
+                {/* Video Examples */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.videos.map((video, videoIndex) => (
+                    <motion.div
+                      key={video.id}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: videoIndex * 0.1 }}
+                    >
+                      <PortfolioCard
+                        video={video}
+                        onClick={handleVideoClick}
+                        className="h-full transform hover:scale-105 transition-transform duration-200"
+                      />
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
@@ -146,7 +177,7 @@ const Skills: React.FC = () => {
           })}
         </div>
 
-        {/* Certifications/Awards Section */}
+        {/* Professional Recognition */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -169,10 +200,10 @@ const Skills: React.FC = () => {
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
-                {skills.filter(s => s.level >= 95).length}
+                {skillCategories.length}
               </div>
-              <div className="text-slate-300">Expert Level Skills</div>
-              <div className="text-sm text-slate-400 mt-1">95%+ Proficiency</div>
+              <div className="text-slate-300">Skill Categories</div>
+              <div className="text-sm text-slate-400 mt-1">Professional Expertise</div>
             </motion.div>
             
             <motion.div 
@@ -180,10 +211,10 @@ const Skills: React.FC = () => {
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
-                {skills.length}
+                {portfolioVideos.filter(v => v.featured).length}
               </div>
-              <div className="text-slate-300">Core Competencies</div>
-              <div className="text-sm text-slate-400 mt-1">Across 4 Categories</div>
+              <div className="text-slate-300">Featured Projects</div>
+              <div className="text-sm text-slate-400 mt-1">Award-Winning Work</div>
             </motion.div>
             
             <motion.div 
@@ -191,10 +222,10 @@ const Skills: React.FC = () => {
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
             >
               <div className="text-3xl font-bold text-purple-400 mb-2">
-                {Math.round(skills.reduce((acc, skill) => acc + skill.level, 0) / skills.length)}%
+                10+
               </div>
-              <div className="text-slate-300">Average Proficiency</div>
-              <div className="text-sm text-slate-400 mt-1">Across All Skills</div>
+              <div className="text-slate-300">Years Experience</div>
+              <div className="text-sm text-slate-400 mt-1">Industry Professional</div>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -237,6 +268,13 @@ const Skills: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
+      
+      {/* Video Modal */}
+      <VideoModal
+        video={selectedVideo}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 };
