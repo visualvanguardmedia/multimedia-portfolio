@@ -94,7 +94,7 @@ Thank you for considering my application. I look forward to discussing how my mu
 Best regards,
 **Jim Elli**
 
-**Portfolio:** [Your Website URL]
+**Portfolio:** https://multimedia-portfolio.netlify.app/
 **Demo Reel:** Comprehensive multimedia showcase available for immediate review
 **References:** Professional references available upon request
 **Availability:** Immediate start with EST/CST schedule compatibility

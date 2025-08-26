@@ -2,10 +2,10 @@ JIM ELLI
 Multimedia Creator/Editor & Video Production Specialist
 
 CONTACT
-Portfolio: [Your Portfolio Website URL]
-Email: [your-email@domain.com]
-Location: [Your Location] - EST/CST Remote Available
-Phone: [your-phone-number]
+Portfolio: 
+Email: jim@visualvanguardmedia.com
+Location: Saint Paul, MN - EST/CST Remote Available
+Phone: 952-270-5165
 
 PROFESSIONAL SUMMARY
 Award-winning multimedia creator with 10+ years experience creating compelling visual narratives for diverse audiences and mission-driven organizations. Delivered 150+ successful multimedia projects with 4.9/5 client satisfaction rating. Expert in end-to-end video production, motion graphics, and podcast creation with proven ability to increase audience engagement by 63%.
@@ -25,7 +25,7 @@ Video Production: Adobe Premiere Pro (98%), DaVinci Resolve (94%), Final Cut Pro
 Motion Graphics: Adobe After Effects (90%), custom animations, kinetic typography
 Audio Production: Adobe Audition (Expert), Pro Tools (Advanced), Logic Pro, podcast workflows
 Design Software: Photoshop (90%), Illustrator (85%), brand integration
-Equipment: RED cameras, Sony FX6, professional lighting, audio recording systems
+Equipment: Sony A7 IV, Sony FX30 (2x), professional lighting, audio recording systems
 Remote Tools: Professional workstation, high-speed internet, collaboration platforms
 
 PROFESSIONAL EXPERIENCE

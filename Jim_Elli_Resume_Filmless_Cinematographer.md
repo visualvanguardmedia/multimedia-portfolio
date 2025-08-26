@@ -2,10 +2,10 @@
 ## Freelance Cinematographer & Multimedia Producer
 
 **Contact Information:**
-- Portfolio Website: [multimedia-portfolio-site.com]
-- Email: [your-email@domain.com]
-- Phone: [your-phone-number]
-- Location: [Your City] - Available for travel to major metropolitan areas
+- Portfolio Website: https://multimedia-portfolio.netlify.app/
+- Email: jim@visualvanguardmedia.com
+- Phone: 952-270-5165
+- Location: Saint Paul, MN - Available for travel to major metropolitan areas
 
 ---
 
@@ -26,7 +26,7 @@ Award-winning cinematographer and multimedia producer with **10+ years of experi
 ## TECHNICAL EXPERTISE
 
 ### Camera Systems & Equipment
-- **Professional Cameras:** RED Camera Systems, Sony FX6, Blackmagic Cinema Cameras
+- **Professional Cameras:** Sony A7 IV, Sony FX30 (2x), Blackmagic Cinema Cameras
 - **Lens Collection:** Multiple professional cinema lenses for diverse shooting scenarios
 - **Lighting Kit:** Complete professional lighting setup including key, fill, and background lighting
 - **Support Gear:** Professional tripods, sliders, stabilizers, and rigging equipment
@@ -121,7 +121,7 @@ Award-winning cinematographer and multimedia producer with **10+ years of experi
 - Background lighting and specialty lighting tools
 
 ### Support & Audio
-- Professional tripods, sliders, and stabilization equipment
+- RS3 gimbal, professional tripods, VND filter kits
 - Wireless microphone systems and audio recording gear
 - Complete mobile production setup for on-location shoots
 
@@ -156,7 +156,7 @@ After reviewing your portfolio at filmless.com, I'm impressed by your commitment
 
 I'm immediately available for freelance cinematography projects and excited about the opportunity to contribute to Filmless's mission of democratizing professional video production. My comprehensive equipment package, proven client satisfaction record, and technical expertise make me an ideal fit for your growing team.
 
-**Portfolio Website:** [Your portfolio URL]
+**Portfolio Website:** https://multimedia-portfolio.netlify.app/
 **Reel:** Available for immediate viewing on my website
 **References:** Available upon request
 

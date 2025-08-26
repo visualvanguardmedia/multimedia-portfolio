@@ -2,10 +2,10 @@
 ## Multimedia Creator/Editor & Video Production Specialist
 
 **Contact Information:**
-- Portfolio Website: [multimedia-portfolio-site.com]
-- Email: [your-email@domain.com]
-- Location: [Your Location] - EST/CST Remote Available
-- Phone: [your-phone-number]
+- Portfolio Website: https://multimedia-portfolio.netlify.app/
+- Email: jim@visualvanguardmedia.com
+- Location: Saint Paul, MN - EST/CST Remote Available
+- Phone: 952-270-5165
 
 ---
 
@@ -143,9 +143,9 @@ Award-winning multimedia creator and video production specialist with **10+ year
 - **Brand Integration:** Seamless incorporation of organizational branding into multimedia content
 
 ### Production Equipment & Technical Setup
-- **Camera Systems:** RED, Sony FX6, Blackmagic professional cameras
-- **Lighting Equipment:** Professional 3-point lighting, LED panels, tungsten systems
-- **Audio Recording:** Wireless microphone systems, professional recording gear
+- **Camera Systems:** Sony A7 IV, Sony FX30 (2x), Blackmagic professional cameras
+- **Lighting Equipment:** Zhiyun 300W light, Godox 200W light, LED panel lighting kit
+- **Audio Recording:** Sennheiser MKE 600, wireless microphone systems
 - **Remote Capabilities:** High-performance workstation, professional storage, collaboration tools
 
 ---

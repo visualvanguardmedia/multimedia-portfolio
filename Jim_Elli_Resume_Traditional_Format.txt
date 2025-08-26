@@ -2,10 +2,10 @@ JIM ELLI
 Freelance Cinematographer & Multimedia Producer
 
 CONTACT
-Portfolio: [Your Portfolio Website URL]
-Email: [your-email@domain.com]
-Phone: [your-phone-number] 
-Location: [Your City] - Available for travel
+Portfolio: https://multimedia-portfolio.netlify.app/
+Email: jim@visualvanguardmedia.com
+Phone: 952-270-5165 
+Location: Saint Paul, MN - Available for travel
 
 PROFESSIONAL SUMMARY
 Award-winning cinematographer with 10+ years experience creating professional video content for diverse audiences. Delivered 150+ successful projects with 4.9/5 client satisfaction rating. Expert in multi-camera setups, lighting design, and efficient production workflows. Complete professional equipment package including cameras, lenses, and lighting kit.
@@ -20,11 +20,11 @@ CORE QUALIFICATIONS
 • Transportation and mobile production capabilities
 
 TECHNICAL SKILLS
-Camera Systems: RED Camera, Sony FX6, Blackmagic Cinema Cameras
+Camera Systems: Sony A7 IV, Sony FX30 (2x), Blackmagic Cinema Cameras
 Lenses: Complete professional cinema lens collection
-Lighting: Professional 3-point lighting, LED panels, tungsten lights
+Lighting: Zhiyun 300W light, Godox 200W light, LED panel lighting kit
 Support: Tripods, sliders, stabilizers, rigging equipment
-Audio: Wireless microphone systems, professional recording gear
+Audio: Sennheiser MKE 600, wireless microphone systems
 Software: DaVinci Resolve, Premiere Pro, After Effects, Pro Tools
 
 PROFESSIONAL EXPERIENCE

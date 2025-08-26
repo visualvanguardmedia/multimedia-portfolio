@@ -16,7 +16,7 @@ I'm excited to apply for the Freelance Cinematographer position at Filmless. Aft
 **Experience That Matches Your Needs:**
 - **10+ years** of cinematography experience creating content for wide audiences
 - **150+ completed projects** with a proven 4.9/5 client satisfaction rating
-- **Professional equipment package** including RED cameras, Sony FX6, complete lens collection, and professional lighting kit
+- **Professional equipment package** including Sony A7 IV, Sony FX30 (2x), complete lens collection, and professional lighting kit
 - **Multi-camera expertise** demonstrated through complex interview productions for MintPress News
 - **Direct client collaboration** experience with businesses of all sizes, from local garage door companies to national news organizations
 
@@ -47,7 +47,7 @@ Thank you for considering my application. I'm available immediately and look for
 Best regards,
 **Jim Elli**
 
-**Portfolio:** [Your Website URL]
+**Portfolio:** https://multimedia-portfolio.netlify.app/
 **Reel:** Available for immediate viewing
 **References:** Available upon request
 

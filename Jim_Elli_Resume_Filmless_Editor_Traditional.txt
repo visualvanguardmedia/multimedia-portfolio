@@ -2,10 +2,10 @@ JIM ELLI
 Freelance Video Editor & Motion Graphics Specialist
 
 CONTACT
-Portfolio: [Your Portfolio Website URL]
-Email: [your-email@domain.com]
+Portfolio: https://multimedia-portfolio.netlify.app/
+Email: jim@visualvanguardmedia.com
 Location: Remote Work Available Worldwide
-Time Zone: [Your Time Zone] - Flexible scheduling
+Time Zone: CST - Flexible scheduling
 
 PROFESSIONAL SUMMARY
 Award-winning video editor and motion graphics specialist with 10+ years experience creating compelling visual stories for diverse audiences. Delivered 150+ successful projects with 4.9/5 client satisfaction rating. Expert in Adobe Creative Suite, After Effects animation, and storytelling through strategic editing that drives engagement and results.

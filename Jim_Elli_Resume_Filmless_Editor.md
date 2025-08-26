@@ -2,10 +2,10 @@
 ## Freelance Video Editor & Motion Graphics Specialist
 
 **Contact Information:**
-- Portfolio Website: [multimedia-portfolio-site.com]
-- Email: [your-email@domain.com]
+- Portfolio Website: https://multimedia-portfolio.netlify.app/
+- Email: jim@visualvanguardmedia.com
 - Location: Remote Work Available Worldwide
-- Time Zone: [Your Time Zone] - Flexible scheduling
+- Time Zone: CST - Flexible scheduling
 
 ---
 
@@ -202,7 +202,7 @@ After reviewing your portfolio at filmless.com, I'm impressed by your commitment
 
 I'm immediately available for freelance editing projects and excited about the opportunity to contribute to Filmless's mission of democratizing professional video production. My comprehensive technical skills, proven client satisfaction record, and remote work expertise make me an ideal fit for your growing team.
 
-**Portfolio Website:** [Your portfolio URL]
+**Portfolio Website:** https://multimedia-portfolio.netlify.app/
 **Demo Reel:** Available for immediate viewing showcasing editing and motion graphics work
 **Sample Projects:** Ready to provide examples specific to Filmless project types
 **References:** Available upon request
