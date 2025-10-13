@@ -9,27 +9,27 @@ const About: React.FC = () => {
   const services = [
     {
       icon: Camera,
-      title: 'Video Production',
-      description: 'End-to-end video production services from concept to delivery, including multi-camera setups, professional lighting, and expert direction.',
+      title: 'Video Editing & Post-Production',
+      description: 'Expert editing across long-form, short-form, and social content using Adobe Premiere Pro and DaVinci Resolve with efficient workflow management and creative problem-solving.',
       color: 'text-blue-400'
     },
     {
       icon: Palette,
-      title: 'Color Grading',
-      description: 'Professional color correction and creative grading using industry-standard tools like DaVinci Resolve to enhance your visual story.',
+      title: 'Motion Graphics & VFX',
+      description: 'Dynamic motion graphics and visual effects using Adobe After Effects and Fusion, creating engaging animations and polished graphics for diverse content needs.',
       color: 'text-purple-400'
     },
     {
-      icon: Headphones,
-      title: 'Audio Production',
-      description: 'Complete audio solutions including podcast production, sound design, and professional audio engineering for pristine sound quality.',
-      color: 'text-green-400'
+      icon: Award,
+      title: 'Color Grading & Finishing',
+      description: 'Professional color correction and creative grading using DaVinci Resolve, delivering cinematic visuals and consistent brand aesthetics across all deliverables.',
+      color: 'text-orange-400'
     },
     {
-      icon: Award,
-      title: 'Creative Direction',
-      description: 'Strategic creative vision and artistic direction that aligns with your brand goals and resonates with your target audience.',
-      color: 'text-orange-400'
+      icon: Headphones,
+      title: 'Audio Post-Production',
+      description: 'Complete audio post solutions including mixing, sound design, and VO recording using DaVinci Resolve Fairlight and Pro Tools for broadcast-quality results.',
+      color: 'text-green-400'
     }
   ];
 
@@ -67,15 +67,15 @@ const About: React.FC = () => {
             variants={fadeInUp}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
           >
-            I&apos;m a passionate MultiMedia Producer dedicated to bringing your vision to life 
-            through exceptional storytelling and technical excellence.
+            I&apos;m a passionate Senior Editor dedicated to crafting compelling stories 
+            through precise editing, creative collaboration, and post-production excellence.
           </motion.p>
           <motion.p 
             variants={fadeInUp}
             className="text-lg text-slate-400 max-w-2xl mx-auto"
           >
-            With over {companyMetrics.yearsExperience} years of experience and {companyMetrics.projectsCompleted}+ successful projects, 
-            I specialize in documentary production, commercial content, creative films, and podcast creation through Visual Vanguard Media.
+            With over {companyMetrics.yearsExperience} years of editorial experience and {companyMetrics.projectsCompleted}+ successful projects, 
+            I specialize in long-form documentaries, short-form social content, commercial videos, and creative storytelling through Visual Vanguard Media.
           </motion.p>
         </motion.div>
 
@@ -171,12 +171,12 @@ const About: React.FC = () => {
           className="text-center mt-16"
         >
           <blockquote className="text-2xl md:text-3xl font-light text-slate-300 italic max-w-4xl mx-auto">
-            &ldquo;I believe every story deserves to be told with cinematic excellence. 
-            My mission is to transform your vision into compelling visual narratives 
-            that inspire, inform, and impact your audience.&rdquo;
+            &ldquo;Great editing is invisible yet essential. Through thoughtful pacing, creative problem-solving, 
+            and collaborative storytelling, I transform raw footage into compelling narratives 
+            that resonate with audiences and achieve creative excellence.&rdquo;
           </blockquote>
           <cite className="block text-slate-400 mt-6 not-italic">
-            — Jim Elli, MultiMedia Producer
+            — Jim Elli, Senior Editor
           </cite>
         </motion.div>
       </div>

@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
             <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-teal-500/30 shadow-2xl">
               <Image
                 src="/images/profile/jim-profile-1.jpg"
-                alt="Jim Elli - MultiMedia Producer"
+                alt="Jim Elli - Senior Editor & Post-Production Specialist"
                 fill
                 className="object-cover"
                 priority
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
               Jim Elli
             </h1>
             <p className="text-xl md:text-2xl text-teal-400 font-medium mb-4">
-              MultiMedia Producer
+              Senior Editor & Post-Production Specialist
             </p>
           </motion.div>
 
@@ -122,8 +122,8 @@ const Hero: React.FC = () => {
           </motion.div>
           
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Professional video production, cinematography, and color grading services 
-            that elevate your story and captivate your audience.
+            Crafting compelling narratives through precision editing, motion graphics, 
+            and collaborative post-production excellence.
           </p>
         </motion.div>
 

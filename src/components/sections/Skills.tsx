@@ -15,51 +15,51 @@ const Skills: React.FC = () => {
   // Define skill categories with curated video examples that best demonstrate each skill
   const skillCategories = [
     {
-      name: 'Cinematography & Color Grading',
+      name: 'Video Editing & Post-Production',
       icon: Video,
       color: 'text-blue-400',
       bgColor: 'bg-blue-600/10',
       borderColor: 'border-blue-600/20',
-      description: 'Professional camera work, lighting design, and advanced color correction techniques',
-      skills: ['Director of Photography', 'Color Grading', 'Visual Storytelling', 'Camera Operation'],
+      description: 'Expert editing across long-form, short-form, and social content using Adobe Premiere Pro and DaVinci Resolve',
+      skills: ['Video Editing', 'Post-Production Workflow', 'Story Structure', 'Pacing & Rhythm'],
       videos: portfolioVideos.filter(video => 
-        ['1', '3', '5', '13'].includes(video.id) // Showreel, FBI Interview, Powerlifting Film, Color Grading Showcase
+        ['1', '5', '3', '6'].includes(video.id) // Showreel, Powerlifting Film, FBI Interview, Garage Doors
       )
     },
     {
-      name: 'Documentary & Interview Production',
+      name: 'Motion Graphics & VFX',
+      icon: Settings,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-600/10',
+      borderColor: 'border-purple-600/20', 
+      description: 'Dynamic motion graphics and visual effects using Adobe After Effects and Fusion for engaging content',
+      skills: ['Motion Graphics', 'After Effects', 'Visual Effects', 'Animation Design'],
+      videos: portfolioVideos.filter(video => 
+        ['14', '7', '8', '17'].includes(video.id) // Motion Graphics + Social media + Branding
+      )
+    },
+    {
+      name: 'Color Grading & Finishing',
+      icon: Headphones,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-600/10',
+      borderColor: 'border-orange-600/20',
+      description: 'Professional color correction and creative grading using DaVinci Resolve for cinematic visuals',
+      skills: ['Color Grading', 'Color Correction', 'Look Development', 'DaVinci Resolve'],
+      videos: portfolioVideos.filter(video => 
+        ['13', '1', '5'].includes(video.id) // Color Grading Showcase, Showreel, Powerlifting Film
+      )
+    },
+    {
+      name: 'Documentary & Interview Editing',
       icon: Video,
       color: 'text-green-400', 
       bgColor: 'bg-green-600/10',
       borderColor: 'border-green-600/20',
-      description: 'Multi-camera setups, professional interviews, and long-form content production',
-      skills: ['Multi-Camera Production', 'Interview Techniques', 'Documentary Filmmaking', 'Lighting Design'],
+      description: 'Long-form documentary and interview editing with multi-camera workflows and audio post-production',
+      skills: ['Documentary Editing', 'Interview Editing', 'Multi-Camera Editing', 'Audio Post'],
       videos: portfolioVideos.filter(video => 
-        ['3', '6', '15', '16'].includes(video.id) // FBI Interview, Garage Doors, MindBlown Podcast, Advanced Interview
-      )
-    },
-    {
-      name: 'Audio Production & Podcasting',
-      icon: Headphones,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-600/10', 
-      borderColor: 'border-purple-600/20',
-      description: 'Professional audio engineering, podcast production, and multi-track recording',
-      skills: ['Audio Engineering', 'Podcast Production', 'Sound Design', 'Multi-track Recording'],
-      videos: portfolioVideos.filter(video => 
-        ['4', '12'].includes(video.id) // Powerlifting podcast, Professional Podcast Interview
-      )
-    },
-    {
-      name: 'Motion Graphics & Creative Design',
-      icon: Settings,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-600/10',
-      borderColor: 'border-orange-600/20', 
-      description: 'Brand-focused content creation, motion graphics, and visual design systems',
-      skills: ['Motion Graphics', 'Brand Design', 'Creative Direction', 'Visual Effects'],
-      videos: portfolioVideos.filter(video => 
-        ['6', '7', '8', '11', '14', '17'].includes(video.id) // Commercial + Social media + Motion Graphics + Branding
+        ['3', '15', '16', '12'].includes(video.id) // FBI Interview, MindBlown Podcast, Advanced Interview, Podcast Interview
       )
     }
   ];
@@ -143,7 +143,7 @@ const Skills: React.FC = () => {
                   
                   {/* Skills List */}
                   <div className="flex flex-wrap gap-3 mb-6">
-                    {category.skills.map((skill, skillIndex) => (
+                    {category.skills.map((skill) => (
                       <span 
                         key={skill}
                         className="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-md text-sm border border-slate-600"
@@ -249,9 +249,9 @@ const Skills: React.FC = () => {
             className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto"
           >
             {[
-              'DaVinci Resolve', 'Adobe Premiere Pro', 'After Effects', 'Photoshop', 
-              'Pro Tools', 'Audition', 'Final Cut Pro', 'Logic Pro', 'Cinema 4D',
-              'RED Camera', 'Sony FX6', 'Blackmagic', 'Color Grading', 'Multi-cam Production'
+              'Adobe Premiere Pro', 'Adobe After Effects', 'DaVinci Resolve', 'Photoshop', 'Illustrator',
+              'Media Encoder', 'Pro Tools', 'Audition', 'Fusion', 'Color Grading',
+              'Motion Graphics', 'VFX Compositing', 'Multi-cam Editing', 'Audio Post-Production'
             ].map((tech, index) => (
               <motion.div
                 key={tech}
