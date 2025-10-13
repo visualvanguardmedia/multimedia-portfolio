@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal documents and files
+MN_*.pdf
+MN_*.txt
+*tax*.pdf
+*Tax*.pdf
+*.zip
+Jim_Elli_Documents*/
+
+# large video files
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.m4v
