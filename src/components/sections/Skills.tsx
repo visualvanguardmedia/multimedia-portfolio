@@ -15,27 +15,39 @@ const Skills: React.FC = () => {
   // Define skill categories with curated video examples that best demonstrate each skill
   const skillCategories = [
     {
-      name: 'Video Editing & Post-Production',
+      name: 'Long-Form Documentary & Interview Editing',
       icon: Video,
       color: 'text-blue-400',
       bgColor: 'bg-blue-600/10',
       borderColor: 'border-blue-600/20',
-      description: 'Expert editing across long-form, short-form, and social content using Adobe Premiere Pro and DaVinci Resolve',
-      skills: ['Video Editing', 'Post-Production Workflow', 'Story Structure', 'Pacing & Rhythm'],
+      description: 'Long-form documentary and interview editing (10-60 min) with multi-camera workflows, story structure, and audio post-production',
+      skills: ['Documentary Editing', 'Multi-Camera Editing', 'Story Structure', 'Audio Post-Production'],
       videos: portfolioVideos.filter(video => 
-        ['1', '5', '3', '6'].includes(video.id) // Showreel, Powerlifting Film, FBI Interview, Garage Doors
+        ['18', '3', '15', '16', '12'].includes(video.id) // Data Centers, FBI Interview, MindBlown, Advanced Interview, Podcast
       )
     },
     {
-      name: 'Motion Graphics & VFX',
+      name: 'Short-Form Social Content',
       icon: Settings,
       color: 'text-purple-400',
       bgColor: 'bg-purple-600/10',
       borderColor: 'border-purple-600/20', 
-      description: 'Dynamic motion graphics and visual effects using Adobe After Effects and Fusion for engaging content',
-      skills: ['Motion Graphics', 'After Effects', 'Visual Effects', 'Animation Design'],
+      description: 'Fast-paced social media editing (15-60 sec) with motion graphics, beat-synced cutting, and vertical/square format optimization',
+      skills: ['Social Media Editing', 'Fast-Paced Cutting', 'Motion Graphics/Text', 'Format Optimization'],
       videos: portfolioVideos.filter(video => 
-        ['14', '7', '8', '17'].includes(video.id) // Motion Graphics + Social media + Branding
+        ['19', '7', '8', '9', '10'].includes(video.id) // Malice Pizza, Rookie Run Club videos
+      )
+    },
+    {
+      name: 'Commercial & Digital Videos',
+      icon: Video,
+      color: 'text-green-400', 
+      bgColor: 'bg-green-600/10',
+      borderColor: 'border-green-600/20',
+      description: 'Commercial and corporate video editing (2-10 min) with client collaboration, brand integration, and polished finishing',
+      skills: ['Commercial Editing', 'Client Collaboration', 'Corporate Content', 'Brand Integration'],
+      videos: portfolioVideos.filter(video => 
+        ['6', '5', '17', '14'].includes(video.id) // Garage Doors, The Pay Off, Brand Design, Motion Graphics
       )
     },
     {
@@ -44,22 +56,10 @@ const Skills: React.FC = () => {
       color: 'text-orange-400',
       bgColor: 'bg-orange-600/10',
       borderColor: 'border-orange-600/20',
-      description: 'Professional color correction and creative grading using DaVinci Resolve for cinematic visuals',
+      description: 'Professional color correction and creative grading using DaVinci Resolve for cinematic visuals across all formats',
       skills: ['Color Grading', 'Color Correction', 'Look Development', 'DaVinci Resolve'],
       videos: portfolioVideos.filter(video => 
-        ['13', '1', '5'].includes(video.id) // Color Grading Showcase, Showreel, Powerlifting Film
-      )
-    },
-    {
-      name: 'Documentary & Interview Editing',
-      icon: Video,
-      color: 'text-green-400', 
-      bgColor: 'bg-green-600/10',
-      borderColor: 'border-green-600/20',
-      description: 'Long-form documentary and interview editing with multi-camera workflows and audio post-production',
-      skills: ['Documentary Editing', 'Interview Editing', 'Multi-Camera Editing', 'Audio Post'],
-      videos: portfolioVideos.filter(video => 
-        ['3', '15', '16', '12'].includes(video.id) // FBI Interview, MindBlown Podcast, Advanced Interview, Podcast Interview
+        ['13', '1', '5', '19'].includes(video.id) // Color Grading Showcase, Showreel, The Pay Off, Malice Pizza
       )
     }
   ];
