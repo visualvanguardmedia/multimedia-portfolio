@@ -121,7 +121,7 @@ const About: React.FC = () => {
             variants={fadeInUp}
             className="text-2xl font-bold text-white text-center mb-8"
           >
-            Our Impact
+            My Impact
           </motion.h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <motion.div variants={fadeInUp} className="text-center">
@@ -162,23 +162,6 @@ const About: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Mission Statement */}
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="text-center mt-16"
-        >
-          <blockquote className="text-2xl md:text-3xl font-light text-slate-300 italic max-w-4xl mx-auto">
-            &ldquo;Great editing is invisible yet essential. Through thoughtful pacing, creative problem-solving, 
-            and collaborative storytelling, I transform raw footage into compelling narratives 
-            that resonate with audiences and achieve creative excellence.&rdquo;
-          </blockquote>
-          <cite className="block text-slate-400 mt-6 not-italic">
-            — Jim Elli, Senior Editor
-          </cite>
-        </motion.div>
       </div>
     </section>
   );

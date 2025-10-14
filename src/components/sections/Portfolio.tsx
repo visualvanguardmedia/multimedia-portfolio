@@ -94,14 +94,13 @@ const Portfolio: React.FC = () => {
             variants={fadeInUp}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Our Portfolio
+            My Portfolio
           </motion.h2>
           <motion.p 
             variants={fadeInUp}
             className="text-xl text-slate-300 max-w-3xl mx-auto"
           >
-            Explore our collection of professional multimedia projects spanning documentaries, 
-            commercials, creative content, and podcast productions.
+            I've worked on everything from long-form documentaries and podcasts to short-form social content and creative ads.
           </motion.p>
         </motion.div>
 
