@@ -19,7 +19,25 @@ export const portfolioVideos: PortfolioVideo[] = [
     year: 2025,
     featured: true,
   },
-  // 2. Run Club injury prevention (Social Media Priority)
+  // 2. Malice Pizza x Rookie Run Club - Portugal Promo (Commercial Priority)
+  {
+    id: '19',
+    title: 'Malice Pizza x Rookie Run Club - Portugal Promo',
+    description: 'Commercial promotional video showcasing complete production skillset including cinematography, editorial pacing, and color grading for brand collaboration. Shot on location in Portugal, this project demonstrates ability to capture compelling commercial footage, craft engaging narrative through editing, and deliver polished color grade that enhances brand aesthetics. Fast-paced editing optimized for social media with attention to visual storytelling and commercial appeal.',
+    platform: 'instagram',
+    instagramId: 'DB91bl2sXDe',
+    instagramUrl: 'https://www.instagram.com/p/DB91bl2sXDe/',
+    thumbnail: '/images/thumbnails/malice-pizza.png',
+    duration: '0:35',
+    category: 'Commercial',
+    tags: ['Commercial Editing', 'Brand Collaboration', 'Color Grading', 'Social Media', 'Promotional'],
+    role: 'Cinematographer, Editor & Colorist',
+    technologies: ['DaVinci Resolve', 'Sony FX30', 'Color Grading', 'Commercial Editing'],
+    client: 'Malice Pizza & Rookie Run Club PT',
+    year: 2024,
+    featured: true,
+  },
+  // 3. Run Club injury prevention (Social Media Priority)
   {
     id: '8',
     title: 'Rookie Run Club - Recovery Advertisement',
@@ -55,7 +73,43 @@ export const portfolioVideos: PortfolioVideo[] = [
     year: 2024,
     featured: true,
   },
-  // 4. Garage door ad (Commercial Priority)
+  // 5. Portugal Marathon - Multi-Brand Collaboration Reel (Social Media Priority)
+  {
+    id: '7',
+    title: 'Portugal Marathon - Multi-Brand Collaboration Reel',
+    description: 'Extended social media reel showcasing Portugal Marathon athletes with multi-brand integration for Rookie Run Club, Effekt, Mirari.pt, and featuring DJ Betoo. Demonstrates advanced vertical format editing with dynamic transitions, music-synced cuts, creative use of backgrounds optimized for vertical orientation, and seamless integration of multiple brand partners. Fast-paced multi-media editing combines athlete footage, brand messaging, and DJ highlights into cohesive longer-form social content. Showcases ability to balance commercial objectives across multiple stakeholders while maintaining engaging editorial rhythm.',
+    platform: 'instagram',
+    instagramId: 'DCgqBpTMqN_',
+    instagramUrl: 'https://www.instagram.com/rookierunclub_pt/reel/DCgqBpTMqN_/',
+    thumbnail: '/images/thumbnails/rookie-run-club.png',
+    duration: '0:30',
+    category: 'Social Media',
+    tags: ['Multi-Brand Collaboration', 'Music-Synced Editing', 'Vertical Format', 'Dynamic Transitions', 'Event Coverage'],
+    role: 'Lead Editor & Post-Production',
+    technologies: ['DaVinci Resolve', 'Music Sync', 'Vertical Optimization', 'Multi-Media Editing', 'Dynamic Transitions'],
+    client: 'Rookie Run Club PT, Effekt, Mirari.pt, DJ Betoo',
+    year: 2024,
+    featured: true,
+  },
+  // 6. Hyperscale Data Centers Taking Over Minnesota (Documentary Priority)
+  {
+    id: '18',
+    title: 'Hyperscale Data Centers Taking Over Minnesota',
+    description: 'Long-form documentary investigation showcasing post-production collaboration, audio editing excellence, and story structure development for investigative journalism. Editorial responsibilities included audio post-production and mixing, narrative structure consultation, clip organization and tagging, technical support for the editing team, and mentoring on DaVinci Resolve workflows. Demonstrates ability to support editorial teams while maintaining technical excellence across a complex 10-minute documentary piece.',
+    platform: 'youtube',
+    youtubeId: 'c5in5xNJkk0',
+    youtubeUrl: 'https://youtu.be/c5in5xNJkk0',
+    thumbnail: 'https://i.ytimg.com/vi/c5in5xNJkk0/hqdefault.jpg',
+    duration: '10:17',
+    category: 'Documentary',
+    tags: ['Documentary Editing', 'Audio Post-Production', 'Story Structure', 'Technical Support', 'Investigative Journalism'],
+    role: 'Post-Production Supervisor & DP',
+    technologies: ['DaVinci Resolve', 'Audio Post-Production', 'Editorial Consultation', 'Technical Mentorship'],
+    client: 'Breakthrough News',
+    year: 2025,
+    featured: true,
+  },
+  // 7. Garage door ad (Commercial Priority)
   {
     id: '6',
     title: "A. Parker's Garage Doors | Meet the Owner",
@@ -78,24 +132,6 @@ export const portfolioVideos: PortfolioVideo[] = [
       company: "A. Parker's Garage Doors",
       quote: 'The video perfectly represents our family business values and has significantly improved our customer engagement. Professional quality that exceeded our expectations.'
     }
-  },
-  // 5. Data center doc (Documentary Priority)
-  {
-    id: '18',
-    title: 'Hyperscale Data Centers Taking Over Minnesota',
-    description: 'Long-form documentary investigation showcasing post-production collaboration, audio editing excellence, and story structure development for investigative journalism. Editorial responsibilities included audio post-production and mixing, narrative structure consultation, clip organization and tagging, technical support for the editing team, and mentoring on DaVinci Resolve workflows. Demonstrates ability to support editorial teams while maintaining technical excellence across a complex 10-minute documentary piece.',
-    platform: 'youtube',
-    youtubeId: 'c5in5xNJkk0',
-    youtubeUrl: 'https://youtu.be/c5in5xNJkk0',
-    thumbnail: 'https://i.ytimg.com/vi/c5in5xNJkk0/hqdefault.jpg',
-    duration: '10:17',
-    category: 'Documentary',
-    tags: ['Documentary Editing', 'Audio Post-Production', 'Story Structure', 'Technical Support', 'Investigative Journalism'],
-    role: 'Post-Production Supervisor & DP',
-    technologies: ['DaVinci Resolve', 'Audio Post-Production', 'Editorial Consultation', 'Technical Mentorship'],
-    client: 'Breakthrough News',
-    year: 2025,
-    featured: true,
   },
   // 6. The Pay Off (Creative Priority)
   {
@@ -145,41 +181,7 @@ export const portfolioVideos: PortfolioVideo[] = [
       quote: 'The technical quality and professional presentation elevated our interview content to broadcast standard. Exceptional work in both production and post-production phases.'
     }
   },
-  // 8. Everything else (Remaining videos in original order)
-  {
-    id: '7',
-    title: 'Portugal Marathon - Multi-Brand Collaboration Reel',
-    description: 'Extended social media reel showcasing Portugal Marathon athletes with multi-brand integration for Rookie Run Club, Effekt, Mirari.pt, and featuring DJ Betoo. Demonstrates advanced vertical format editing with dynamic transitions, music-synced cuts, creative use of backgrounds optimized for vertical orientation, and seamless integration of multiple brand partners. Fast-paced multi-media editing combines athlete footage, brand messaging, and DJ highlights into cohesive longer-form social content. Showcases ability to balance commercial objectives across multiple stakeholders while maintaining engaging editorial rhythm.',
-    platform: 'instagram',
-    instagramId: 'DCgqBpTMqN_',
-    instagramUrl: 'https://www.instagram.com/rookierunclub_pt/reel/DCgqBpTMqN_/',
-    thumbnail: '/images/thumbnails/rookie-run-club.png',
-    duration: '0:30',
-    category: 'Social Media',
-    tags: ['Multi-Brand Collaboration', 'Music-Synced Editing', 'Vertical Format', 'Dynamic Transitions', 'Event Coverage'],
-    role: 'Lead Editor & Post-Production',
-    technologies: ['DaVinci Resolve', 'Music Sync', 'Vertical Optimization', 'Multi-Media Editing', 'Dynamic Transitions'],
-    client: 'Rookie Run Club PT, Effekt, Mirari.pt, DJ Betoo',
-    year: 2024,
-    featured: true,
-  },
-  {
-    id: '19',
-    title: 'Malice Pizza x Rookie Run Club - Portugal Promo',
-    description: 'Commercial promotional video showcasing complete production skillset including cinematography, editorial pacing, and color grading for brand collaboration. Shot on location in Portugal, this project demonstrates ability to capture compelling commercial footage, craft engaging narrative through editing, and deliver polished color grade that enhances brand aesthetics. Fast-paced editing optimized for social media with attention to visual storytelling and commercial appeal.',
-    platform: 'instagram',
-    instagramId: 'DB91bl2sXDe',
-    instagramUrl: 'https://www.instagram.com/p/DB91bl2sXDe/',
-    thumbnail: '/images/thumbnails/malice-pizza.png',
-    duration: '0:35',
-    category: 'Commercial',
-    tags: ['Commercial Editing', 'Brand Collaboration', 'Color Grading', 'Social Media', 'Promotional'],
-    role: 'Cinematographer, Editor & Colorist',
-    technologies: ['DaVinci Resolve', 'Sony FX30', 'Color Grading', 'Commercial Editing'],
-    client: 'Malice Pizza & Rookie Run Club PT',
-    year: 2024,
-    featured: true,
-  },
+  // 9. Everything else (Remaining videos in original order)
   // Additional Professional Videos - Expanded Skills Demonstration
   {
     id: '13',
