@@ -1,6 +1,7 @@
 import { PortfolioVideo, Skill, Experience, Testimonial } from '@/types';
 
 export const portfolioVideos: PortfolioVideo[] = [
+  // 1. Reel (Top Priority for CL)
   {
     id: '1',
     title: '2025 Editorial & Color Grading Reel',
@@ -18,52 +19,43 @@ export const portfolioVideos: PortfolioVideo[] = [
     year: 2025,
     featured: true,
   },
+  // 2. Run Club injury prevention (Social Media Priority)
   {
-    id: '3',
-    title: 'FBI Whistleblower: Israel Has Corrupted The US Government',
-    description: 'Long-form documentary interview showcasing multi-camera editing, narrative structure, and precision color grading. This 45-minute edit demonstrates expertise in maintaining pacing across extended content, seamless multi-angle cutting, and collaborative post-production workflow for serious journalistic storytelling.',
-    platform: 'youtube',
-    youtubeId: 'fMeT_FAqWjo',
-    youtubeUrl: 'https://youtu.be/fMeT_FAqWjo',
-    thumbnail: 'https://i.ytimg.com/vi/fMeT_FAqWjo/hqdefault.jpg',
-    duration: '45:30',
-    category: 'Documentary',
-    tags: ['Documentary Editing', 'Multi-camera', 'Color Grading', 'Long-form Content'],
-    role: 'Lead Editor & Post-Production Supervisor',
-    technologies: ['Multi-cam Setup', 'Professional Lighting', 'DaVinci Resolve', 'Audio Sync'],
-    client: 'MintPress News',
+    id: '8',
+    title: 'Rookie Run Club - Recovery Advertisement',
+    description: 'High-energy social media edit demonstrating beat-synced cutting, dynamic pacing, and motivational messaging optimized for Instagram Reels. Showcases expertise in fast-paced editorial decisions, color correction, and format-specific editing techniques for maximum platform engagement.',
+    platform: 'instagram',
+    instagramId: 'DBg-Tl1M5QD',
+    instagramUrl: 'https://www.instagram.com/rookierunclub_pt/reel/DBg-Tl1M5QD/',
+    thumbnail: '/images/thumbnails/shakeout-run.png',
+    duration: '0:28',
+    category: 'Social Media',
+    tags: ['Social Media Editing', 'Instagram Reels', 'Fast-Paced Edit', 'Beat-Synced'],
+    role: 'Social Media Editor',
+    technologies: ['DaVinci Resolve', 'Sony FX30', 'Color Grading', 'Social Optimization'],
+    client: 'Rookie Run Club PT',
     year: 2024,
     featured: true,
-    testimonial: {
-      name: 'Mnar Adley',
-      role: 'Editor-in-Chief',
-      company: 'MintPress News',
-      quote: 'The technical quality and professional presentation elevated our interview content to broadcast standard. Exceptional work in both production and post-production phases.'
-    }
   },
+  // 3. Run club portugal collab (Social Media Priority)
   {
-    id: '5',
-    title: 'The Pay Off | A Powerlifting Short Film',
-    description: 'Creative short film showcasing editorial storytelling through rhythmic pacing, emotional arc development, and strategic editing choices. This project demonstrates ability to craft compelling narratives through precise cuts, motion graphics integration, sound design, and collaborative creative problem-solving that elevates sports content into cinematic storytelling.',
-    platform: 'youtube',
-    youtubeId: 'opHQQrtgCWM',
-    youtubeUrl: 'https://youtu.be/opHQQrtgCWM',
-    thumbnail: 'https://i.ytimg.com/vi/opHQQrtgCWM/hqdefault.jpg',
-    duration: '8:45',
-    category: 'Creative',
-    tags: ['Short Film', 'Creative Editing', 'Storytelling', 'Motion Graphics'],
-    role: 'Editor, Colorist & Motion Graphics',
-    technologies: ['DaVinci Resolve', 'After Effects', 'Color Grading', 'Sound Design'],
-    client: 'Zao Strength',
+    id: '10',
+    title: 'Rookie Run Club x Oficina Loba - Portugal Collaboration',
+    description: 'Brand collaboration reel showcasing complete production skillset: directing, cinematography, editing, color grading, and motion graphics. Created for partnership between Rookie Run Club Portugal and Oficina Loba (hand-printed t-shirt company). Features fast-paced cutting, upbeat rhythm, motion graphics/text overlays, and vibrant color grade that captures the energy of both brands. Demonstrates ability to handle full production cycle from concept to delivery for social media campaigns.',
+    platform: 'instagram',
+    instagramId: 'DAqJH6_MTIl',
+    instagramUrl: 'https://www.instagram.com/rookierunclub_pt/reel/DAqJH6_MTIl/',
+    thumbnail: '/images/thumbnails/rookie-run-oficina-loba.png',
+    duration: '0:29',
+    category: 'Social Media',
+    tags: ['Brand Collaboration', 'Fast-Paced Editing', 'Motion Graphics', 'Social Media', 'Color Grading'],
+    role: 'Director, Cinematographer, Editor & Colorist',
+    technologies: ['DaVinci Resolve', 'Sony FX30', 'Motion Graphics', 'Color Grading', 'Fast Cuts'],
+    client: 'Rookie Run Club PT & Oficina Loba',
     year: 2024,
     featured: true,
-    testimonial: {
-      name: 'Jake Remmert',
-      role: 'Founder',
-      company: 'Zao Strength',
-      quote: 'The creative vision and technical execution brought our story to life in ways we never imagined. This film perfectly captures the essence of powerlifting dedication.'
-    }
   },
+  // 4. Garage door ad (Commercial Priority)
   {
     id: '6',
     title: "A. Parker's Garage Doors | Meet the Owner",
@@ -79,7 +71,7 @@ export const portfolioVideos: PortfolioVideo[] = [
     technologies: ['Professional Lighting', 'DaVinci Resolve', 'Sony A7IV', 'Corporate Graphics'],
     client: "A. Parker's Garage Doors",
     year: 2024,
-    featured: false,
+    featured: true,
     testimonial: {
       name: 'Adam Parker',
       role: 'Owner',
@@ -87,7 +79,8 @@ export const portfolioVideos: PortfolioVideo[] = [
       quote: 'The video perfectly represents our family business values and has significantly improved our customer engagement. Professional quality that exceeded our expectations.'
     }
   },
-  // Instagram Reels - Visual Vanguard Media Social Content
+  // 5. Data center doc (Documentary Priority)
+  // 8. Everything else (Remaining videos in original order)
   {
     id: '7',
     title: 'Portugal Marathon - Multi-Brand Collaboration Reel',
@@ -172,6 +165,54 @@ export const portfolioVideos: PortfolioVideo[] = [
     client: 'Breakthrough News',
     year: 2025,
     featured: true,
+  },
+  // 6. The Pay Off (Creative Priority)
+  {
+    id: '5',
+    title: 'The Pay Off | A Powerlifting Short Film',
+    description: 'Creative short film showcasing editorial storytelling through rhythmic pacing, emotional arc development, and strategic editing choices. This project demonstrates ability to craft compelling narratives through precise cuts, motion graphics integration, sound design, and collaborative creative problem-solving that elevates sports content into cinematic storytelling.',
+    platform: 'youtube',
+    youtubeId: 'opHQQrtgCWM',
+    youtubeUrl: 'https://youtu.be/opHQQrtgCWM',
+    thumbnail: 'https://i.ytimg.com/vi/opHQQrtgCWM/hqdefault.jpg',
+    duration: '8:45',
+    category: 'Creative',
+    tags: ['Short Film', 'Creative Editing', 'Storytelling', 'Motion Graphics'],
+    role: 'Editor, Colorist & Motion Graphics',
+    technologies: ['DaVinci Resolve', 'After Effects', 'Color Grading', 'Sound Design'],
+    client: 'Zao Strength',
+    year: 2024,
+    featured: true,
+    testimonial: {
+      name: 'Jake Remmert',
+      role: 'Founder',
+      company: 'Zao Strength',
+      quote: 'The creative vision and technical execution brought our story to life in ways we never imagined. This film perfectly captures the essence of powerlifting dedication.'
+    }
+  },
+  // 7. Mint Press doc (Documentary Priority)
+  {
+    id: '3',
+    title: 'FBI Whistleblower: Israel Has Corrupted The US Government',
+    description: 'Long-form documentary interview showcasing multi-camera editing, narrative structure, and precision color grading. This 45-minute edit demonstrates expertise in maintaining pacing across extended content, seamless multi-angle cutting, and collaborative post-production workflow for serious journalistic storytelling.',
+    platform: 'youtube',
+    youtubeId: 'fMeT_FAqWjo',
+    youtubeUrl: 'https://youtu.be/fMeT_FAqWjo',
+    thumbnail: 'https://i.ytimg.com/vi/fMeT_FAqWjo/hqdefault.jpg',
+    duration: '45:30',
+    category: 'Documentary',
+    tags: ['Documentary Editing', 'Multi-camera', 'Color Grading', 'Long-form Content'],
+    role: 'Lead Editor & Post-Production Supervisor',
+    technologies: ['Multi-cam Setup', 'Professional Lighting', 'DaVinci Resolve', 'Audio Sync'],
+    client: 'MintPress News',
+    year: 2024,
+    featured: true,
+    testimonial: {
+      name: 'Mnar Adley',
+      role: 'Editor-in-Chief',
+      company: 'MintPress News',
+      quote: 'The technical quality and professional presentation elevated our interview content to broadcast standard. Exceptional work in both production and post-production phases.'
+    }
   },
   // Additional Professional Videos - Expanded Skills Demonstration
   {
