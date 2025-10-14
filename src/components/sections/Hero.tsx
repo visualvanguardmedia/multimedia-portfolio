@@ -168,8 +168,6 @@ const Hero: React.FC = () => {
             <div className="text-sm text-slate-400">Projects Completed</div>
           </div>
 
-
-
           <div className="text-center">
             <div className="w-12 h-12 bg-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
               <Award className="w-6 h-6 text-amber-400" />

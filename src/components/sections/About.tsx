@@ -133,8 +133,6 @@ const About: React.FC = () => {
               </div>
             </motion.div>
             
-
-            
             <motion.div variants={fadeInUp} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
                 {companyMetrics.totalVideoViews}
