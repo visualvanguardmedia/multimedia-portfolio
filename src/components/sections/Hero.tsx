@@ -156,7 +156,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
         >
           <div className="text-center">
             <div className="w-12 h-12 bg-teal-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -168,15 +168,7 @@ const Hero: React.FC = () => {
             <div className="text-sm text-slate-400">Projects Completed</div>
           </div>
 
-          <div className="text-center">
-            <div className="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <Users className="w-6 h-6 text-emerald-400" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-1">
-              {companyMetrics.clientSatisfaction}
-            </div>
-            <div className="text-sm text-slate-400">Client Rating</div>
-          </div>
+
 
           <div className="text-center">
             <div className="w-12 h-12 bg-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-3">

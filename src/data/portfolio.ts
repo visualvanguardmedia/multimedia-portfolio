@@ -318,7 +318,6 @@ export const testimonials: Testimonial[] = [
 export const companyMetrics = {
   projectsCompleted: 150,
   yearsExperience: 10,
-  clientSatisfaction: 4.9,
   avgEngagementIncrease: 63,
   totalVideoViews: '500K+',
   industryAwards: 3
