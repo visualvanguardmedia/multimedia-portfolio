@@ -193,8 +193,8 @@ export const portfolioVideos: PortfolioVideo[] = [
   // Additional Professional Videos - Expanded Skills Demonstration
   {
     id: '13',
-    title: 'Powerlifting Adjectives - TikTok Trend Short',
-    description: 'Creative YouTube Short adapting viral TikTok color-action trend format for powerlifting content. Each adjective describing the sport is matched with corresponding color grade and visual treatment. Demonstrates ability to identify trending social media formats, adapt them for niche audiences, and execute quick-turnaround creative edits with color grading for vertical short-form content. Shows editorial flexibility and understanding of platform-specific trends.',
+    title: 'Intuitive Training Concept Reel / TikTok Trend',
+    description: 'Creative YouTube Short adapting viral TikTok color-action trend format for training content. Each concept describing intuitive training is matched with corresponding color grade and visual treatment. Demonstrates ability to identify trending social media formats, adapt them for niche audiences, and execute quick-turnaround creative edits with color grading for vertical short-form content. Shows editorial flexibility and understanding of platform-specific trends.',
     platform: 'youtube',
     youtubeId: 'LHGkka7MUSQ',
     youtubeUrl: 'https://youtube.com/shorts/LHGkka7MUSQ',
