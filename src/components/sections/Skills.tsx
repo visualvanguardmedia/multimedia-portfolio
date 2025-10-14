@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
       description: 'Fast-paced social media editing (15-60 sec) with motion graphics, beat-synced cutting, and vertical/square format optimization',
       skills: ['Social Media Editing', 'Fast-Paced Cutting', 'Motion Graphics/Text', 'Format Optimization'],
       videos: portfolioVideos.filter(video => 
-        ['19', '7', '8', '9', '10'].includes(video.id) // Malice Pizza, Rookie Run Club videos
+        ['19', '7', '8', '10'].includes(video.id) // Malice Pizza, Portugal Marathon, Recovery Ad, Oficina Loba
       )
     },
     {
@@ -47,7 +47,7 @@ const Skills: React.FC = () => {
       description: 'Commercial and corporate video editing (2-10 min) with client collaboration, brand integration, and polished finishing',
       skills: ['Commercial Editing', 'Client Collaboration', 'Corporate Content', 'Brand Integration'],
       videos: portfolioVideos.filter(video => 
-        ['6', '5', '17', '14'].includes(video.id) // Garage Doors, The Pay Off, Brand Design, Motion Graphics
+        ['6', '5', '14'].includes(video.id) // Garage Doors, The Pay Off, Motion Graphics
       )
     },
     {

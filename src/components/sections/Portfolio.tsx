@@ -100,7 +100,7 @@ const Portfolio: React.FC = () => {
             variants={fadeInUp}
             className="text-xl text-slate-300 max-w-3xl mx-auto"
           >
-            I've worked on everything from long-form documentaries and podcasts to short-form social content and creative ads.
+            I&apos;ve worked on everything from long-form documentaries and podcasts to short-form social content and creative ads.
           </motion.p>
         </motion.div>
 
