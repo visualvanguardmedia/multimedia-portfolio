@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
       description: 'Long-form documentary and interview editing (10-60 min) with multi-camera workflows, story structure, and audio post-production',
       skills: ['Documentary Editing', 'Multi-Camera Editing', 'Story Structure', 'Audio Post-Production'],
       videos: portfolioVideos.filter(video => 
-        ['18', '3', '15', '16', '12'].includes(video.id) // Data Centers, FBI Interview, MindBlown, Advanced Interview, Podcast
+        ['18', '3'].includes(video.id) // Data Centers, FBI Interview
       )
     },
     {
