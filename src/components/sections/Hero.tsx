@@ -4,7 +4,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
-import { companyMetrics } from '@/data/portfolio';
 import { smoothScrollTo } from '@/lib/utils';
 import heroContent from '../../../content/hero.json';
 
@@ -119,39 +118,22 @@ const Hero: React.FC = () => {
           </Button>
         </motion.div>
 
-        {/* Stats */}
+        {/* Work types */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="flex items-center justify-center gap-8 sm:gap-16 text-center"
+          className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap"
         >
-          <div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">
-              {companyMetrics.projectsCompleted}+
-            </div>
-            <div className="text-xs sm:text-sm text-white/40 uppercase tracking-wider mt-1">
-              Projects
-            </div>
-          </div>
-          <div className="w-px h-10 bg-white/20" />
-          <div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">
-              {companyMetrics.yearsExperience}+
-            </div>
-            <div className="text-xs sm:text-sm text-white/40 uppercase tracking-wider mt-1">
-              Years
-            </div>
-          </div>
-          <div className="w-px h-10 bg-white/20" />
-          <div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">
-              {companyMetrics.totalVideoViews}
-            </div>
-            <div className="text-xs sm:text-sm text-white/40 uppercase tracking-wider mt-1">
-              Views
-            </div>
-          </div>
+          {['Documentaries', 'Live Events', 'Branded Content', 'Commercials', 'Social Media'].map((type, i) => (
+            <span
+              key={type}
+              className="text-xs sm:text-sm text-white/50 uppercase tracking-[0.15em] flex items-center gap-3 sm:gap-4"
+            >
+              {i > 0 && <span className="text-white/20">·</span>}
+              {type}
+            </span>
+          ))}
         </motion.div>
 
         {/* Slide indicators */}

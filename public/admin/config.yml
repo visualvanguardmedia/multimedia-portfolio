@@ -105,50 +105,53 @@ collections:
   # ── Portfolio Videos ──────────────────────────────────────────────
   - name: portfolio
     label: "Portfolio Videos"
-    file: "content/portfolio.json"
-    format: json
-    fields:
-      - label: "Videos"
+    files:
+      - label: "Portfolio Videos"
         name: videos
-        widget: list
-        summary: "{{fields.title}} ({{fields.category}}, {{fields.year}})"
+        file: "content/portfolio.json"
+        format: json
         fields:
-          - { label: "ID", name: id, widget: string }
-          - { label: "Title", name: title, widget: string }
-          - { label: "Description", name: description, widget: text }
-          - label: "Platform"
-            name: platform
-            widget: select
-            options: ["youtube", "instagram"]
-          - { label: "YouTube ID", name: youtubeId, widget: string, required: false }
-          - { label: "YouTube URL", name: youtubeUrl, widget: string, required: false }
-          - { label: "Instagram ID", name: instagramId, widget: string, required: false }
-          - { label: "Instagram URL", name: instagramUrl, widget: string, required: false }
-          - { label: "Thumbnail", name: thumbnail, widget: image }
-          - { label: "Duration", name: duration, widget: string, required: false }
-          - label: "Category"
-            name: category
-            widget: select
-            options: ["Documentary", "Podcast", "Commercial", "Creative", "Showreel", "Social Media"]
-          - label: "Tags"
-            name: tags
+          - label: "Videos"
+            name: videos
             widget: list
-            field: { label: "Tag", name: tag, widget: string }
-          - { label: "Role", name: role, widget: string }
-          - label: "Technologies"
-            name: technologies
-            widget: list
-            field: { label: "Technology", name: tech, widget: string }
-          - { label: "Client", name: client, widget: string, required: false }
-          - { label: "Year", name: year, widget: number, value_type: int }
-          - { label: "Featured", name: featured, widget: boolean, default: false }
-          - label: "Testimonial"
-            name: testimonial
-            widget: object
-            required: false
-            collapsed: true
+            summary: "{{fields.title}} ({{fields.category}}, {{fields.year}})"
             fields:
-              - { label: "Name", name: name, widget: string, required: false }
-              - { label: "Role", name: role, widget: string, required: false }
-              - { label: "Company", name: company, widget: string, required: false }
-              - { label: "Quote", name: quote, widget: text, required: false }
+              - { label: "ID", name: id, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - label: "Platform"
+                name: platform
+                widget: select
+                options: ["youtube", "instagram"]
+              - { label: "YouTube ID", name: youtubeId, widget: string, required: false }
+              - { label: "YouTube URL", name: youtubeUrl, widget: string, required: false }
+              - { label: "Instagram ID", name: instagramId, widget: string, required: false }
+              - { label: "Instagram URL", name: instagramUrl, widget: string, required: false }
+              - { label: "Thumbnail", name: thumbnail, widget: image }
+              - { label: "Duration", name: duration, widget: string, required: false }
+              - label: "Category"
+                name: category
+                widget: select
+                options: ["Documentary", "Podcast", "Commercial", "Creative", "Showreel", "Social Media"]
+              - label: "Tags"
+                name: tags
+                widget: list
+                field: { label: "Tag", name: tag, widget: string }
+              - { label: "Role", name: role, widget: string }
+              - label: "Technologies"
+                name: technologies
+                widget: list
+                field: { label: "Technology", name: tech, widget: string }
+              - { label: "Client", name: client, widget: string, required: false }
+              - { label: "Year", name: year, widget: number, value_type: int }
+              - { label: "Featured", name: featured, widget: boolean, default: false }
+              - label: "Testimonial"
+                name: testimonial
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Name", name: name, widget: string, required: false }
+                  - { label: "Role", name: role, widget: string, required: false }
+                  - { label: "Company", name: company, widget: string, required: false }
+                  - { label: "Quote", name: quote, widget: text, required: false }
