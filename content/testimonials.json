@@ -1,0 +1,39 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Mnar Adley",
+      "role": "Editor-in-Chief",
+      "company": "MintPress News",
+      "quote": "Jim's editorial expertise consistently delivers broadcast-quality content that elevates our journalistic work. His precision in multi-camera editing, pacing, and color grading is exceptional.",
+      "rating": 5,
+      "projectId": "3"
+    },
+    {
+      "id": "2",
+      "name": "Jake Remmert",
+      "role": "Founder",
+      "company": "Zao Strength",
+      "quote": "Jim's editorial vision transformed how we present our content. His ability to craft compelling narratives through editing and motion graphics exceeded our expectations.",
+      "rating": 5,
+      "projectId": "5"
+    },
+    {
+      "id": "3",
+      "name": "Adam Parker",
+      "role": "Business Owner",
+      "company": "A. Parker's Garage Doors",
+      "quote": "The commercial video Jim edited has become our most effective marketing tool. His collaborative approach and attention to pacing created professional, authentic content.",
+      "rating": 5,
+      "projectId": "6"
+    },
+    {
+      "id": "4",
+      "name": "Michael Chen",
+      "role": "Creative Director",
+      "company": "Digital Media Solutions",
+      "quote": "One of the most technically proficient and creatively innovative editors I've worked with. Jim's collaborative approach and problem-solving skills make complex post-production seamless.",
+      "rating": 5
+    }
+  ]
+}

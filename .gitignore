@@ -47,6 +47,11 @@ MN_*.txt
 *Tax*.pdf
 *.zip
 Jim_Elli_Documents*/
+Jim_Elli_Resume*
+jim-elli_resume*
+EMAIL_TEMPLATE.md
+CRUSH.md
+dotfiles/
 
 # large video files
 *.mov

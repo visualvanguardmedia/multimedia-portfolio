@@ -1,0 +1,154 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  # ── Site Sections (single-file collections) ──────────────────────
+  - name: sections
+    label: "Site Sections"
+    files:
+      # Hero Section
+      - label: "Hero Section"
+        name: hero
+        file: "content/hero.json"
+        format: json
+        fields:
+          - { label: "Name", name: name, widget: string }
+          - { label: "Title", name: title, widget: string }
+          - { label: "Tagline", name: tagline, widget: text }
+          - label: "Hero Stills"
+            name: stills
+            widget: list
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Image", name: src, widget: image }
+              - { label: "Alt Text", name: alt, widget: string }
+
+      # About Section
+      - label: "About Section"
+        name: about
+        file: "content/about.json"
+        format: json
+        fields:
+          - { label: "Heading", name: heading, widget: string }
+          - { label: "Bio", name: bio, widget: text }
+          - label: "Services"
+            name: services
+            widget: list
+            field: { label: "Service", name: service, widget: string }
+          - label: "Clients"
+            name: clients
+            widget: list
+            field: { label: "Client", name: client, widget: string }
+
+      # Stills Gallery
+      - label: "Stills Gallery"
+        name: stills
+        file: "content/stills.json"
+        format: json
+        fields:
+          - label: "Stills"
+            name: stills
+            widget: list
+            summary: "{{fields.project}} — {{fields.alt}}"
+            fields:
+              - { label: "ID", name: id, widget: string }
+              - { label: "Image", name: src, widget: image }
+              - { label: "Alt Text", name: alt, widget: string }
+              - { label: "Project Name", name: project, widget: string }
+
+      # Testimonials
+      - label: "Testimonials"
+        name: testimonials
+        file: "content/testimonials.json"
+        format: json
+        fields:
+          - label: "Testimonials"
+            name: testimonials
+            widget: list
+            summary: "{{fields.name}} — {{fields.company}}"
+            fields:
+              - { label: "ID", name: id, widget: string }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Role", name: role, widget: string }
+              - { label: "Company", name: company, widget: string }
+              - { label: "Quote", name: quote, widget: text }
+              - { label: "Rating", name: rating, widget: number, value_type: int, min: 1, max: 5 }
+              - { label: "Project ID", name: projectId, widget: string, required: false }
+
+      # Site Settings
+      - label: "Site Settings"
+        name: settings
+        file: "content/settings.json"
+        format: json
+        fields:
+          - label: "Metrics"
+            name: metrics
+            widget: object
+            fields:
+              - { label: "Projects Completed", name: projectsCompleted, widget: number, value_type: int }
+              - { label: "Years Experience", name: yearsExperience, widget: number, value_type: int }
+              - { label: "Avg Engagement Increase (%)", name: avgEngagementIncrease, widget: number, value_type: int }
+              - { label: "Total Video Views", name: totalVideoViews, widget: string }
+              - { label: "Industry Awards", name: industryAwards, widget: number, value_type: int }
+          - label: "Contact Info"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Email", name: email, widget: string }
+              - { label: "Phone", name: phone, widget: string }
+              - { label: "Location", name: location, widget: string }
+
+  # ── Portfolio Videos ──────────────────────────────────────────────
+  - name: portfolio
+    label: "Portfolio Videos"
+    file: "content/portfolio.json"
+    format: json
+    fields:
+      - label: "Videos"
+        name: videos
+        widget: list
+        summary: "{{fields.title}} ({{fields.category}}, {{fields.year}})"
+        fields:
+          - { label: "ID", name: id, widget: string }
+          - { label: "Title", name: title, widget: string }
+          - { label: "Description", name: description, widget: text }
+          - label: "Platform"
+            name: platform
+            widget: select
+            options: ["youtube", "instagram"]
+          - { label: "YouTube ID", name: youtubeId, widget: string, required: false }
+          - { label: "YouTube URL", name: youtubeUrl, widget: string, required: false }
+          - { label: "Instagram ID", name: instagramId, widget: string, required: false }
+          - { label: "Instagram URL", name: instagramUrl, widget: string, required: false }
+          - { label: "Thumbnail", name: thumbnail, widget: image }
+          - { label: "Duration", name: duration, widget: string, required: false }
+          - label: "Category"
+            name: category
+            widget: select
+            options: ["Documentary", "Podcast", "Commercial", "Creative", "Showreel", "Social Media"]
+          - label: "Tags"
+            name: tags
+            widget: list
+            field: { label: "Tag", name: tag, widget: string }
+          - { label: "Role", name: role, widget: string }
+          - label: "Technologies"
+            name: technologies
+            widget: list
+            field: { label: "Technology", name: tech, widget: string }
+          - { label: "Client", name: client, widget: string, required: false }
+          - { label: "Year", name: year, widget: number, value_type: int }
+          - { label: "Featured", name: featured, widget: boolean, default: false }
+          - label: "Testimonial"
+            name: testimonial
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { label: "Name", name: name, widget: string, required: false }
+              - { label: "Role", name: role, widget: string, required: false }
+              - { label: "Company", name: company, widget: string, required: false }
+              - { label: "Quote", name: quote, widget: text, required: false }

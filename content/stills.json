@@ -1,0 +1,52 @@
+{
+  "stills": [
+    {
+      "id": "1",
+      "src": "https://i.ytimg.com/vi/opHQQrtgCWM/maxresdefault.jpg",
+      "alt": "Cinematic powerlifting frame — dramatic lighting",
+      "project": "The Pay Off"
+    },
+    {
+      "id": "2",
+      "src": "https://i.ytimg.com/vi/c5in5xNJkk0/maxresdefault.jpg",
+      "alt": "Data center exterior — wide establishing shot",
+      "project": "Hyperscale Data Centers"
+    },
+    {
+      "id": "3",
+      "src": "https://i.ytimg.com/vi/fMeT_FAqWjo/maxresdefault.jpg",
+      "alt": "Interview two-shot — professional lighting setup",
+      "project": "MintPress News Documentary"
+    },
+    {
+      "id": "4",
+      "src": "/images/thumbnails/malice-pizza.png",
+      "alt": "Street-level brand shoot — Malice Pizza Portugal",
+      "project": "Malice Pizza x Rookie Run Club"
+    },
+    {
+      "id": "5",
+      "src": "https://i.ytimg.com/vi/nR3dpWKxbOM/maxresdefault.jpg",
+      "alt": "Business owner portrait — natural window light",
+      "project": "A. Parker's Garage Doors"
+    },
+    {
+      "id": "6",
+      "src": "/images/thumbnails/rookie-run-club.png",
+      "alt": "Marathon athletes in motion — dynamic framing",
+      "project": "Portugal Marathon Reel"
+    },
+    {
+      "id": "7",
+      "src": "https://i.ytimg.com/vi/Hhpvn-LIu-w/maxresdefault.jpg",
+      "alt": "Color grading showcase — editorial finish",
+      "project": "2025 Reel"
+    },
+    {
+      "id": "8",
+      "src": "/images/thumbnails/rookie-run-oficina-loba.png",
+      "alt": "Brand collaboration shoot — vibrant color grade",
+      "project": "Rookie Run Club x Oficina Loba"
+    }
+  ]
+}

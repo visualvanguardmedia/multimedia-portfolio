@@ -1,59 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   
-  /* Brand Colors */
-  --teal-600: #0d9488;
-  --teal-500: #14b8a6;
-  --teal-400: #2dd4bf;
-  --orange-600: #ea580c;
-  --orange-500: #f97316;
-  --orange-400: #fb923c;
+  /* Neutral Palette with Warm Accent */
+  --warm-accent: #C8A882;
+  --warm-accent-light: #D4BA9A;
+  --warm-accent-dim: #A08A6E;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
   
-  /* Professional Teal-Orange Color Palette */
-  --color-primary: var(--teal-600);
-  --color-primary-hover: var(--teal-500);
-  --color-accent: var(--orange-600);
-  --color-accent-hover: var(--orange-500);
-  --color-accent-light: var(--orange-400);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Minimalist Color System */
+  --color-warm: var(--warm-accent);
+  --color-warm-light: var(--warm-accent-light);
+  --color-warm-dim: var(--warm-accent-dim);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Modern gradient utilities */
-.gradient-teal-orange {
-  background: linear-gradient(135deg, var(--teal-600) 0%, var(--orange-600) 100%);
-}
-
-.gradient-teal-orange-soft {
-  background: linear-gradient(135deg, var(--teal-500) 0%, var(--orange-500) 100%);
-}
-
-.gradient-text-teal-orange {
-  background: linear-gradient(135deg, var(--teal-400) 0%, var(--orange-400) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 /* Mobile scroll and modal optimizations */

@@ -12,12 +12,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', loading = false, children, disabled, ...props }, ref) => {
-    const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
+    const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
     
     const variants = {
-      primary: 'bg-gradient-to-r from-teal-600 to-orange-600 hover:from-teal-700 hover:to-orange-700 text-white focus:ring-teal-500 shadow-lg hover:shadow-xl',
+      primary: 'bg-white text-slate-950 hover:bg-slate-200 focus:ring-white shadow-lg hover:shadow-xl',
       secondary: 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 hover:border-slate-500 focus:ring-slate-500',
-      outline: 'border border-slate-600 hover:border-teal-400 text-slate-300 hover:text-white hover:bg-teal-600/10 focus:ring-teal-400',
+      outline: 'border border-slate-500 hover:border-white text-slate-300 hover:text-white hover:bg-white/5 focus:ring-white',
       ghost: 'text-slate-300 hover:text-white hover:bg-slate-800/50 focus:ring-slate-400'
     };
 

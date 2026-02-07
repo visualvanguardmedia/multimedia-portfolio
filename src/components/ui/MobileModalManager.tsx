@@ -239,7 +239,7 @@ export const MobileModalManager: React.FC<MobileModalManagerProps> = ({
           {/* Modal */}
           <motion.div
             ref={modalRef}
-            className={`relative w-full max-w-6xl mx-auto bg-slate-900 rounded-xl shadow-2xl border border-slate-700 ${modalClassName}`}
+            className={`relative w-full max-w-6xl mx-auto bg-slate-900 rounded-xl shadow-2xl border border-slate-800 ${modalClassName}`}
             variants={modalVariants}
             initial="hidden"
             animate="visible"

@@ -1,22 +1,18 @@
 import Hero from '@/components/sections/Hero';
-import About from '@/components/sections/About';
 import Portfolio from '@/components/sections/Portfolio';
-import Skills from '@/components/sections/Skills';
-import Experience from '@/components/sections/Experience';
-import Testimonials from '@/components/sections/Testimonials';
+import StillsGallery from '@/components/sections/StillsGallery';
+import About from '@/components/sections/About';
 import Contact from '@/components/sections/Contact';
 import Header from '@/components/layout/Header';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900">
+    <main className="min-h-screen bg-slate-950">
       <Header />
       <Hero />
-      <About />
       <Portfolio />
-      <Skills />
-      <Experience />
-      <Testimonials />
+      <StillsGallery />
+      <About />
       <Contact />
     </main>
   );

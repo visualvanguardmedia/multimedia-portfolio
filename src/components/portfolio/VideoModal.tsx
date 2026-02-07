@@ -52,7 +52,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
       {/* Close button - positioned for mobile touch */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 sm:-top-4 sm:-right-4 z-10 w-10 h-10 bg-slate-800/90 hover:bg-slate-700 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 backdrop-blur-sm"
+        className="absolute top-4 right-4 sm:-top-4 sm:-right-4 z-10 w-10 h-10 bg-slate-800/90 hover:bg-slate-700 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 backdrop-blur-sm"
         aria-label="Close video modal"
       >
         <X className="w-5 h-5 text-white" />
@@ -63,7 +63,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
           {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-slate-800">
               <div className="flex items-center space-x-2">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-400"></div>
                 <span className="text-slate-300">Loading video...</span>
               </div>
             </div>
@@ -131,7 +131,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
               </h2>
               
               <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-4">
-                <span className="bg-blue-600/20 px-3 py-1 rounded-full text-blue-400">
+                <span className="bg-white/10 px-3 py-1 rounded-full text-white/70">
                   {video.category}
                 </span>
                 <span>{video.role}</span>
