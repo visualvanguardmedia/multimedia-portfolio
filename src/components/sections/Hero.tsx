@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 1 }}
           className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap"
         >
-          {['Documentaries', 'Live Events', 'Branded Content', 'Commercials', 'Social Media'].map((type, i) => (
+          {['YouTube Growth', 'Social Strategy', 'Brand Partnerships', 'Team Leadership', 'Content Production'].map((type, i) => (
             <span
               key={type}
               className="text-xs sm:text-sm text-white/50 uppercase tracking-[0.15em] flex items-center gap-3 sm:gap-4"
