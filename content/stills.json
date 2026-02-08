@@ -2,33 +2,15 @@
   "stills": [
     {
       "id": "1",
-      "src": "https://i.ytimg.com/vi/opHQQrtgCWM/maxresdefault.jpg",
-      "alt": "Cinematic powerlifting frame — dramatic lighting",
-      "project": "The Pay Off"
+      "src": "/images/uploads/john-2.webp",
+      "alt": "Livestream- MFE Union",
+      "project": "Breakthrough News Minnesota General Strike"
     },
     {
       "id": "2",
       "src": "https://i.ytimg.com/vi/c5in5xNJkk0/maxresdefault.jpg",
       "alt": "Data center exterior — wide establishing shot",
       "project": "Hyperscale Data Centers"
-    },
-    {
-      "id": "3",
-      "src": "https://i.ytimg.com/vi/fMeT_FAqWjo/maxresdefault.jpg",
-      "alt": "Interview two-shot — professional lighting setup",
-      "project": "MintPress News Documentary"
-    },
-    {
-      "id": "4",
-      "src": "/images/thumbnails/malice-pizza.png",
-      "alt": "Street-level brand shoot — Malice Pizza Portugal",
-      "project": "Malice Pizza x Rookie Run Club"
-    },
-    {
-      "id": "5",
-      "src": "https://i.ytimg.com/vi/nR3dpWKxbOM/maxresdefault.jpg",
-      "alt": "Business owner portrait — natural window light",
-      "project": "A. Parker's Garage Doors"
     },
     {
       "id": "6",
