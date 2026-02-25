@@ -1,34 +1,116 @@
 {
   "stills": [
     {
-      "id": "1",
+      "id": "cann-1",
+      "src": "/images/photography/cann-product-hero.jpg",
+      "alt": "CANN Social Tonic — product hero (tabletop photography)",
+      "project": "CANN — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "cann-2",
+      "src": "/images/photography/cann-product-detail.jpg",
+      "alt": "CANN Social Tonic — label/detail (tabletop photography)",
+      "project": "CANN — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "cann-3",
+      "src": "/images/photography/cann-product-styled.jpg",
+      "alt": "CANN Social Tonic — styled product shot with citrus",
+      "project": "CANN — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "cann-4",
+      "src": "/images/photography/cann-product-water.jpg",
+      "alt": "CANN Social Tonic — lifestyle shot in water",
+      "project": "CANN — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "cann-5",
+      "src": "/images/photography/cann-product-hammock.jpg",
+      "alt": "CANN Social Tonic — lifestyle product shot",
+      "project": "CANN — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "nike-1",
+      "src": "/images/photography/nike-savaleos-hero.jpg",
+      "alt": "Nike Savaleos — dramatic side profile (studio lighting)",
+      "project": "Nike Savaleos — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "nike-2",
+      "src": "/images/photography/nike-savaleos-pair.jpg",
+      "alt": "Nike Savaleos — pair shot (tabletop, dark background)",
+      "project": "Nike Savaleos — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "nike-3",
+      "src": "/images/photography/nike-savaleos-detail.jpg",
+      "alt": "Nike Savaleos — detail / three-quarter angle",
+      "project": "Nike Savaleos — Product Photography",
+      "category": "Product"
+    },
+    {
+      "id": "minerva-1",
+      "src": "/images/photography/minerva-headshots/minerva-headshot-01.jpg",
+      "alt": "Corporate headshot — natural light portrait",
+      "project": "Minerva Psychology — Headshots",
+      "category": "Portrait"
+    },
+    {
+      "id": "minerva-2",
+      "src": "/images/photography/minerva-headshots/minerva-headshot-02.jpg",
+      "alt": "Corporate headshot — editorial portrait",
+      "project": "Minerva Psychology — Headshots",
+      "category": "Portrait"
+    },
+    {
+      "id": "minerva-3",
+      "src": "/images/photography/minerva-headshots/minerva-headshot-03.jpg",
+      "alt": "Corporate headshot — studio portrait",
+      "project": "Minerva Psychology — Headshots",
+      "category": "Portrait"
+    },
+    {
+      "id": "frame-1",
       "src": "/images/uploads/john-2.webp",
-      "alt": "Livestream- MFE Union",
-      "project": "Breakthrough News Minnesota General Strike"
+      "alt": "Livestream — union event (frame grab)",
+      "project": "Breakthrough News Minnesota General Strike",
+      "category": "Frame"
     },
     {
-      "id": "2",
+      "id": "frame-2",
       "src": "https://i.ytimg.com/vi/c5in5xNJkk0/maxresdefault.jpg",
-      "alt": "Data center exterior — wide establishing shot",
-      "project": "Hyperscale Data Centers"
+      "alt": "Data center exterior — wide establishing shot (frame)",
+      "project": "Hyperscale Data Centers",
+      "category": "Frame"
     },
     {
-      "id": "6",
+      "id": "frame-3",
       "src": "/images/thumbnails/rookie-run-club.png",
-      "alt": "Marathon athletes in motion — dynamic framing",
-      "project": "Portugal Marathon Reel"
+      "alt": "Marathon athletes in motion — dynamic framing (frame)",
+      "project": "Portugal Marathon Reel",
+      "category": "Frame"
     },
     {
-      "id": "7",
+      "id": "frame-4",
       "src": "https://i.ytimg.com/vi/Hhpvn-LIu-w/maxresdefault.jpg",
-      "alt": "Color grading showcase — editorial finish",
-      "project": "2025 Reel"
+      "alt": "Editorial reel — graded frame",
+      "project": "2025 Reel",
+      "category": "Frame"
     },
     {
-      "id": "8",
+      "id": "frame-5",
       "src": "/images/thumbnails/rookie-run-oficina-loba.png",
-      "alt": "Brand collaboration shoot — vibrant color grade",
-      "project": "Rookie Run Club x Oficina Loba"
+      "alt": "Brand collaboration — vibrant grade (frame)",
+      "project": "Rookie Run Club x Oficina Loba",
+      "category": "Frame"
     }
   ]
 }

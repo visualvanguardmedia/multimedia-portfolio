@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -8,17 +8,33 @@ import { stills, Still } from '@/data/stills';
 
 const StillsGallery: React.FC = () => {
   const [selected, setSelected] = useState<Still | null>(null);
+  const [activeFilter, setActiveFilter] = useState('All');
 
-  const currentIndex = selected ? stills.findIndex((s) => s.id === selected.id) : -1;
+  const categories = ['All', ...Array.from(new Set(stills.map((s) => s.category ?? 'Frame')))];
+
+  const filteredStills = useMemo(() => {
+    if (activeFilter === 'All') return stills;
+    return stills.filter((s) => (s.category ?? 'Frame') === activeFilter);
+  }, [activeFilter]);
+
+  useEffect(() => {
+    if (!selected) return;
+    if (activeFilter === 'All') return;
+
+    const selectedCategory = selected.category ?? 'Frame';
+    if (selectedCategory !== activeFilter) setSelected(null);
+  }, [activeFilter, selected]);
+
+  const currentIndex = selected ? filteredStills.findIndex((s) => s.id === selected.id) : -1;
 
   const navigate = (direction: 1 | -1) => {
     if (currentIndex === -1) return;
-    const next = (currentIndex + direction + stills.length) % stills.length;
-    setSelected(stills[next]);
+    const next = (currentIndex + direction + filteredStills.length) % filteredStills.length;
+    setSelected(filteredStills[next]);
   };
 
   return (
-    <section id="stills" className="py-20 sm:py-28 bg-slate-950">
+    <section id="photography" className="py-20 sm:py-28 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -26,19 +42,49 @@ const StillsGallery: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-12"
         >
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-white mb-4">
-            Frames
+            Stills & Tabletop
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-            Selected stills from recent productions.
+          <p className="text-white/50 max-w-2xl mx-auto text-lg mb-8">
+            Product, portrait, and selected frames — captured and finished for brand use.
           </p>
+
+          {/* Competencies integrated into design based on job requirements */}
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Sony FX6</span>
+            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Stop Motion</span>
+            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Studio Tabletop</span>
+            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Adobe Premiere / Photoshop</span>
+          </div>
+        </motion.div>
+
+        {/* Category filters */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-12"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveFilter(category)}
+              className={`text-sm uppercase tracking-wider transition-all pb-1 border-b-2 ${activeFilter === category
+                  ? 'text-white border-white'
+                  : 'text-white/40 border-transparent hover:text-white/70'
+                }`}
+            >
+              {category}
+            </button>
+          ))}
         </motion.div>
 
         {/* Grid — 2 cols on mobile, 3 on md, 4 on lg */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
-          {stills.map((still, index) => (
+          {filteredStills.map((still, index) => (
             <motion.button
               key={still.id}
               initial={{ opacity: 0, y: 20 }}
@@ -46,8 +92,8 @@ const StillsGallery: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               onClick={() => setSelected(still)}
-              className="group relative aspect-[16/10] overflow-hidden rounded-md bg-slate-800 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-slate-950"
-              aria-label={`View still: ${still.alt}`}
+              className="group relative aspect-[3/2] overflow-hidden bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-black"
+              aria-label={`View photo: ${still.alt}`}
             >
               <Image
                 src={still.src}
@@ -66,6 +112,23 @@ const StillsGallery: React.FC = () => {
             </motion.button>
           ))}
         </div>
+
+        {/* No Results */}
+        {filteredStills.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-16"
+          >
+            <p className="text-white/50 text-lg">No photos in this category yet.</p>
+            <button
+              onClick={() => setActiveFilter('All')}
+              className="mt-4 text-white hover:text-[var(--warm-accent)] text-sm underline underline-offset-4"
+            >
+              View all
+            </button>
+          </motion.div>
+        )}
       </div>
 
       {/* Lightbox */}
@@ -119,7 +182,7 @@ const StillsGallery: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="relative max-w-5xl w-full aspect-video"
+              className="relative max-w-5xl w-full max-h-[80vh] aspect-[3/2]"
               onClick={(e) => e.stopPropagation()}
             >
               <Image

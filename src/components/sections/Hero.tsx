@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import Button from '@/components/ui/Button';
 import { smoothScrollTo } from '@/lib/utils';
 import heroContent from '../../../content/hero.json';
 
@@ -25,7 +24,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
       {/* Background stills carousel */}
       <AnimatePresence mode="sync">
@@ -53,7 +52,7 @@ const Hero: React.FC = () => {
       </AnimatePresence>
 
       {/* Dark scrim overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
 
       {/* Film grain texture */}
       <div
@@ -100,22 +99,20 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
+          className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20"
         >
-          <Button
-            variant="primary"
-            size="lg"
+          <button
             onClick={() => smoothScrollTo('#portfolio')}
+            className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white hover:text-gray-300 transition-colors border-b border-white/40 hover:border-white pb-1"
           >
-            View My Work
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
+            View Reel
+          </button>
+          <button
             onClick={() => smoothScrollTo('#contact')}
+            className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors border-b border-transparent hover:border-white/60 pb-1"
           >
-            Get In Touch
-          </Button>
+            Contact
+          </button>
         </motion.div>
 
         {/* Work types */}
@@ -125,7 +122,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 1 }}
           className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap"
         >
-          {['Documentaries', 'Live Events', 'Branded Content', 'Commercials', 'Social Media'].map((type, i) => (
+          {['Studio Production', 'Tabletop', 'Stop Motion', 'Editorial', 'Live / Streaming'].map((type, i) => (
             <span
               key={type}
               className="text-xs sm:text-sm text-white/50 uppercase tracking-[0.15em] flex items-center gap-3 sm:gap-4"
@@ -147,9 +144,8 @@ const Hero: React.FC = () => {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-0.5 rounded-full transition-all duration-500 ${
-                i === current ? 'w-8 bg-white' : 'w-4 bg-white/30'
-              }`}
+              className={`h-0.5 rounded-full transition-all duration-500 ${i === current ? 'w-8 bg-white' : 'w-4 bg-white/30'
+                }`}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}

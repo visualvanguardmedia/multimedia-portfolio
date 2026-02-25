@@ -59,62 +59,6 @@
     {
       "technologies": [
         "DaVinci Resolve",
-        "Sony A7SIII",
-        "Color Grading",
-        "Social Optimization"
-      ],
-      "client": "Rookie Run Club PT",
-      "thumbnail": "/images/thumbnails/shakeout-run.png",
-      "instagramId": "DBg-Tl1M5QD",
-      "featured": true,
-      "platform": "instagram",
-      "duration": "0:28",
-      "role": "Social Media Editor",
-      "title": "Rookie Run Club - Recovery Advertisement",
-      "tags": [
-        "Social Media Editing",
-        "Instagram Reels",
-        "Fast-Paced Edit",
-        "Beat-Synced"
-      ],
-      "id": "8",
-      "description": "High-energy social media edit demonstrating beat-synced cutting, dynamic pacing, and motivational messaging optimized for Instagram Reels.",
-      "year": 2024,
-      "instagramUrl": "https://www.instagram.com/rookierunclub_pt/reel/DBg-Tl1M5QD/",
-      "category": "Social Media"
-    },
-    {
-      "technologies": [
-        "DaVinci Resolve",
-        "Sony A7SIII",
-        "Motion Graphics",
-        "Color Grading",
-        "Fast Cuts"
-      ],
-      "client": "Rookie Run Club PT & Oficina Loba",
-      "thumbnail": "/images/thumbnails/rookie-run-oficina-loba.png",
-      "instagramId": "DAqJH6_MTIl",
-      "featured": true,
-      "platform": "instagram",
-      "duration": "0:29",
-      "role": "Director, Cinematographer, Editor & Colorist",
-      "title": "Rookie Run Club x Oficina Loba - Portugal Collaboration",
-      "tags": [
-        "Brand Collaboration",
-        "Fast-Paced Editing",
-        "Motion Graphics",
-        "Social Media",
-        "Color Grading"
-      ],
-      "id": "10",
-      "description": "Brand collaboration reel showcasing complete production skillset: directing, cinematography, editing, color grading, and motion graphics.",
-      "year": 2024,
-      "instagramUrl": "https://www.instagram.com/rookierunclub_pt/reel/DAqJH6_MTIl/",
-      "category": "Social Media"
-    },
-    {
-      "technologies": [
-        "DaVinci Resolve",
         "Music Sync",
         "Vertical Optimization",
         "Multi-Media Editing",
@@ -200,72 +144,6 @@
         "role": "Owner",
         "company": "A. Parker's Garage Doors",
         "quote": "The video perfectly represents our family business values and has significantly improved our customer engagement. Professional quality that exceeded our expectations."
-      }
-    },
-    {
-      "technologies": [
-        "DaVinci Resolve",
-        "After Effects",
-        "Color Grading",
-        "Sound Design"
-      ],
-      "client": "Zao Strength",
-      "thumbnail": "https://i.ytimg.com/vi/opHQQrtgCWM/hqdefault.jpg",
-      "youtubeUrl": "https://youtu.be/opHQQrtgCWM",
-      "featured": true,
-      "platform": "youtube",
-      "duration": "8:45",
-      "role": "Editor, Colorist & Motion Graphics",
-      "title": "The Pay Off | A Powerlifting Short Film",
-      "tags": [
-        "Short Film",
-        "Creative Editing",
-        "Storytelling",
-        "Motion Graphics"
-      ],
-      "id": "5",
-      "description": "Creative short film showcasing editorial storytelling through rhythmic pacing, emotional arc development, and strategic editing choices.",
-      "year": 2024,
-      "category": "Creative",
-      "youtubeId": "opHQQrtgCWM",
-      "testimonial": {
-        "name": "Jake Remmert",
-        "role": "Founder",
-        "company": "Zao Strength",
-        "quote": "The creative vision and technical execution brought our story to life in ways we never imagined. This film perfectly captures the essence of powerlifting dedication."
-      }
-    },
-    {
-      "technologies": [
-        "Multi-cam Setup",
-        "Professional Lighting",
-        "DaVinci Resolve",
-        "Audio Sync"
-      ],
-      "client": "MintPress News",
-      "thumbnail": "https://i.ytimg.com/vi/fMeT_FAqWjo/hqdefault.jpg",
-      "youtubeUrl": "https://youtu.be/fMeT_FAqWjo",
-      "featured": true,
-      "platform": "youtube",
-      "duration": "45:30",
-      "role": "Lead Editor & Post-Production Supervisor",
-      "title": "FBI Whistleblower: Israel Has Corrupted The US Government",
-      "tags": [
-        "Documentary Editing",
-        "Multi-camera",
-        "Color Grading",
-        "Long-form Content"
-      ],
-      "id": "3",
-      "description": "Long-form documentary interview showcasing multi-camera editing, narrative structure, and precision color grading.",
-      "year": 2024,
-      "category": "Documentary",
-      "youtubeId": "fMeT_FAqWjo",
-      "testimonial": {
-        "name": "Mnar Adley",
-        "role": "Editor-in-Chief",
-        "company": "MintPress News",
-        "quote": "The technical quality and professional presentation elevated our interview content to broadcast standard. Exceptional work in both production and post-production phases."
       }
     },
     {

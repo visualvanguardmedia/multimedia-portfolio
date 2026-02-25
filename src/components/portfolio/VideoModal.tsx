@@ -136,7 +136,6 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, isOpen, onClose }) => {
                 </span>
                 <span>{video.role}</span>
                 {video.client && <span>Client: {video.client}</span>}
-                <span>{video.year}</span>
               </div>
 
               <p className="text-slate-300 leading-relaxed mb-4">

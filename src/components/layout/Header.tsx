@@ -30,17 +30,16 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50' 
+    <header
+      className={`fixed top-0 w-full z-40 transition-all duration-300 ${isScrolled
+          ? 'bg-black/90 backdrop-blur-md border-b border-white/10'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo / Name */}
-          <button 
+          <button
             onClick={() => handleNavClick('#hero')}
             className="focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg p-1 -m-1 group"
             aria-label="Go to homepage"
@@ -89,13 +88,13 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 py-4 border-t border-slate-800">
+          <nav className="md:hidden mt-4 py-4 border-t border-white/10">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-slate-300 hover:text-white transition-colors text-sm text-left focus:outline-none"
+                  className="text-white/70 hover:text-white transition-colors text-sm text-left focus:outline-none uppercase tracking-widest"
                 >
                   {item.label}
                 </button>

@@ -2,34 +2,30 @@
   "stills": [
     {
       "src": "/images/uploads/naomi-3.png",
-      "alt": "ICE OUT - Target Center"
+      "alt": "ICE OUT — Target Center"
     },
     {
-      "src": "https://i.ytimg.com/vi/c5in5xNJkk0/maxresdefault.jpg",
-      "alt": "Hyperscale Data Centers — Documentary"
-    },
-    {
-      "src": "https://i.ytimg.com/vi/fMeT_FAqWjo/maxresdefault.jpg",
-      "alt": "MintPress News — Documentary Interview"
-    },
-    {
-      "src": "https://i.ytimg.com/vi/nR3dpWKxbOM/maxresdefault.jpg",
-      "alt": "A. Parker's Garage Doors — Commercial"
-    },
-    {
-      "src": "https://i.ytimg.com/vi/Hhpvn-LIu-w/maxresdefault.jpg",
-      "alt": "2025 Editorial & Color Grading Reel"
+      "src": "/images/photography/cann-product-hero.jpg",
+      "alt": "CANN Social Tonic — Product Photography"
     },
     {
       "src": "/images/uploads/frozen-eyelashes.png",
-      "alt": "ICE OUT - Part 2"
+      "alt": "ICE OUT — Part 2"
+    },
+    {
+      "src": "/images/photography/nike-savaleos-detail.jpg",
+      "alt": "Nike Savaleos — Product Photography"
     },
     {
       "src": "/images/uploads/wide-march-2.png",
-      "alt": "ICE OUT - part 3"
+      "alt": "ICE OUT — Part 3"
+    },
+    {
+      "src": "/images/photography/nike-savaleos-hero.jpg",
+      "alt": "Nike Savaleos — Studio Lighting"
     }
   ],
   "name": "Jim Elli",
-  "title": "Director of Photography · Cinematographer · Editor",
-  "tagline": "Crafting compelling visual narratives through precision cinematography, editorial excellence, and cinematic color grading."
+  "title": "Senior Visual Artist · Editor · Photographer",
+  "tagline": "Studio production and editorial finishing — tabletop photography, stop motion, motion graphics, and story-driven edits."
 }

@@ -48,6 +48,10 @@ export const skills: Skill[] = [
   { name: 'Media Management', level: 92, category: 'Technical' },
   { name: 'Compression & Encoding', level: 90, category: 'Technical' },
   { name: 'Workflow Optimization', level: 93, category: 'Technical' },
+  { name: 'Studio Photography', level: 85, category: 'Technical' },
+  { name: 'Stop Motion Workflow', level: 78, category: 'Technical' },
+  { name: 'OBS / Live Streaming', level: 82, category: 'Technical' },
+  { name: 'Blackmagic Web Presenter', level: 80, category: 'Technical' },
 ];
 
 export const experience: Experience[] = [

@@ -5,6 +5,7 @@ export interface Still {
   src: string;
   alt: string;
   project: string;
+  category?: 'Product' | 'Portrait' | 'Frame';
   aspect?: 'landscape' | 'portrait';
 }
 
