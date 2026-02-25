@@ -83,34 +83,6 @@
       "alt": "Livestream — union event (frame grab)",
       "project": "Breakthrough News Minnesota General Strike",
       "category": "Frame"
-    },
-    {
-      "id": "frame-2",
-      "src": "https://i.ytimg.com/vi/c5in5xNJkk0/maxresdefault.jpg",
-      "alt": "Data center exterior — wide establishing shot (frame)",
-      "project": "Hyperscale Data Centers",
-      "category": "Frame"
-    },
-    {
-      "id": "frame-3",
-      "src": "/images/thumbnails/rookie-run-club.png",
-      "alt": "Marathon athletes in motion — dynamic framing (frame)",
-      "project": "Portugal Marathon Reel",
-      "category": "Frame"
-    },
-    {
-      "id": "frame-4",
-      "src": "https://i.ytimg.com/vi/Hhpvn-LIu-w/maxresdefault.jpg",
-      "alt": "Editorial reel — graded frame",
-      "project": "2025 Reel",
-      "category": "Frame"
-    },
-    {
-      "id": "frame-5",
-      "src": "/images/thumbnails/rookie-run-oficina-loba.png",
-      "alt": "Brand collaboration — vibrant grade (frame)",
-      "project": "Rookie Run Club x Oficina Loba",
-      "category": "Frame"
     }
   ]
 }

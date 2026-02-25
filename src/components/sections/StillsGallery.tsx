@@ -1,207 +1,178 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useRef, useMemo } from 'react';
 import Image from 'next/image';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { stills, Still } from '@/data/stills';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { stills } from '@/data/stills';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+/**
+ * Interleave stills so no two consecutive images share the same project.
+ * Highlights diverse skills rather than batching by category.
+ */
+function interleaveStills(items: typeof stills) {
+  const buckets: Record<string, typeof stills> = {};
+  for (const s of items) {
+    const key = s.project;
+    if (!buckets[key]) buckets[key] = [];
+    buckets[key].push(s);
+  }
+
+  const keys = Object.keys(buckets).sort((a, b) => buckets[b].length - buckets[a].length);
+  const result: typeof stills = [];
+  let lastProject = '';
+
+  while (keys.some((k) => buckets[k].length > 0)) {
+    let placed = false;
+    for (const key of keys) {
+      if (buckets[key].length > 0 && key !== lastProject) {
+        result.push(buckets[key].shift()!);
+        lastProject = key;
+        placed = true;
+        break;
+      }
+    }
+    if (!placed) {
+      for (const key of keys) {
+        if (buckets[key].length > 0) {
+          result.push(buckets[key].shift()!);
+          lastProject = key;
+          break;
+        }
+      }
+    }
+  }
+
+  return result;
+}
 
 const StillsGallery: React.FC = () => {
-  const [selected, setSelected] = useState<Still | null>(null);
-  const [activeFilter, setActiveFilter] = useState('All');
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
 
-  const categories = ['All', ...Array.from(new Set(stills.map((s) => s.category ?? 'Frame')))];
-
-  const filteredStills = useMemo(() => {
-    if (activeFilter === 'All') return stills;
-    return stills.filter((s) => (s.category ?? 'Frame') === activeFilter);
-  }, [activeFilter]);
+  const interleaved = useMemo(() => interleaveStills([...stills]), []);
 
   useEffect(() => {
-    if (!selected) return;
-    if (activeFilter === 'All') return;
+    if (!sectionRef.current || !trackRef.current) return;
 
-    const selectedCategory = selected.category ?? 'Frame';
-    if (selectedCategory !== activeFilter) setSelected(null);
-  }, [activeFilter, selected]);
+    const ctx = gsap.context(() => {
+      const track = trackRef.current!;
+      const scrollWidth = track.scrollWidth - window.innerWidth;
 
-  const currentIndex = selected ? filteredStills.findIndex((s) => s.id === selected.id) : -1;
+      gsap.to(track, {
+        x: -scrollWidth,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: () => `+=${scrollWidth}`,
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+    }, sectionRef);
 
-  const navigate = (direction: 1 | -1) => {
-    if (currentIndex === -1) return;
-    const next = (currentIndex + direction + filteredStills.length) % filteredStills.length;
-    setSelected(filteredStills[next]);
-  };
+    return () => ctx.revert();
+  }, [interleaved]);
 
   return (
-    <section id="photography" className="py-20 sm:py-28 bg-void">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-sans text-4xl sm:text-5xl font-bold text-ghost mb-4 tracking-tight">
-            Stills &amp; Tabletop
-          </h2>
-          <p className="text-ghost/50 max-w-2xl mx-auto text-lg mb-8">
-            Product, portrait, and selected frames — captured and finished for brand use.
-          </p>
-
-          {/* Competencies integrated into design based on job requirements */}
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Sony FX6</span>
-            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Stop Motion</span>
-            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Studio Tabletop</span>
-            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Adobe Premiere / Photoshop</span>
+    <section ref={sectionRef} id="photography" className="relative bg-void overflow-hidden">
+      {/* Section header — pinned at top */}
+      <div className="absolute top-0 left-0 w-full z-10 pt-20 pb-8 px-6 pointer-events-none">
+        <div className="max-w-7xl mx-auto flex items-end justify-between">
+          <div>
+            <h2 className="font-sans text-4xl sm:text-5xl font-bold text-ghost tracking-tight">
+              Stills &amp; Tabletop
+            </h2>
+            <p className="text-ghost/50 text-lg mt-2">
+              Product, portrait, and selected frames — captured and finished for brand use.
+            </p>
           </div>
-        </motion.div>
-
-        {/* Category filters */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-12"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveFilter(category)}
-              className={`text-sm uppercase tracking-wider transition-all pb-1 border-b-2 font-sans ${activeFilter === category
-                  ? 'text-ghost border-accent'
-                  : 'text-ghost/40 border-transparent hover:text-ghost/70'
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Grid — 2 cols on mobile, 3 on md, 4 on lg */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
-          {filteredStills.map((still, index) => (
-            <motion.button
-              key={still.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              onClick={() => setSelected(still)}
-              className="group relative aspect-[3/2] overflow-hidden bg-primary focus:outline-none focus:ring-2 focus:ring-ghost/30 focus:ring-offset-2 focus:ring-offset-void"
-              aria-label={`View photo: ${still.alt}`}
-            >
-              <Image
-                src={still.src}
-                alt={still.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                unoptimized={still.src.startsWith('http')}
-              />
-              {/* Hover overlay with project name */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
-                <span className="text-white text-xs sm:text-sm font-medium px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
-                  {still.project}
-                </span>
-              </div>
-            </motion.button>
-          ))}
+          <div className="hidden md:flex items-center gap-3 text-ghost/30 font-mono text-xs uppercase tracking-widest">
+            <span>Scroll</span>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
         </div>
-
-        {/* No Results */}
-        {filteredStills.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-16"
-          >
-            <p className="text-ghost/50 text-lg">No photos in this category yet.</p>
-            <button
-              onClick={() => setActiveFilter('All')}
-              className="mt-4 text-ghost hover:text-accent text-sm underline underline-offset-4"
-            >
-              View all
-            </button>
-          </motion.div>
-        )}
       </div>
 
-      {/* Lightbox */}
-      <AnimatePresence>
-        {selected && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
-            onClick={() => setSelected(null)}
+      {/* Horizontal scroll track */}
+      <div
+        ref={trackRef}
+        className="flex items-center gap-8 px-6 h-screen"
+        style={{ paddingTop: '8rem' }}
+      >
+        {/* Leading spacer for header visibility */}
+        <div className="flex-shrink-0 w-[30vw]" />
+
+        {interleaved.map((still, index) => (
+          <div
+            key={still.id}
+            className="still-card group relative flex-shrink-0 rounded-[2rem] overflow-hidden bg-primary border border-ghost/10 shadow-2xl"
+            style={{
+              width: 'clamp(300px, 55vw, 800px)',
+              height: '70vh',
+            }}
           >
-            {/* Close button */}
-            <button
-              onClick={() => setSelected(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
-              aria-label="Close lightbox"
-            >
-              <X className="w-5 h-5 text-white" />
-            </button>
+            <Image
+              src={still.src}
+              alt={still.alt}
+              fill
+              className="object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105"
+              sizes="55vw"
+              unoptimized={still.src.startsWith('http')}
+            />
 
-            {/* Prev */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                navigate(-1);
-              }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
-              aria-label="Previous image"
-            >
-              <ChevronLeft className="w-5 h-5 text-white" />
-            </button>
+            {/* Gradient scrim */}
+            <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
 
-            {/* Next */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                navigate(1);
-              }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
-              aria-label="Next image"
-            >
-              <ChevronRight className="w-5 h-5 text-white" />
-            </button>
+            {/* Content overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+              <span className="inline-block px-3 py-1 mb-3 text-[10px] uppercase font-mono tracking-widest border border-ghost/20 rounded-full text-ghost/70">
+                {still.category ?? 'Frame'}
+              </span>
+              <h3 className="font-sans font-bold text-xl md:text-2xl text-ghost mb-1">
+                {still.project}
+              </h3>
+              <p className="font-sans text-sm text-ghost/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                {still.alt}
+              </p>
+            </div>
 
-            {/* Image */}
-            <motion.div
-              key={selected.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className="relative max-w-5xl w-full max-h-[80vh] aspect-[3/2]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Image
-                src={selected.src}
-                alt={selected.alt}
-                fill
-                className="object-contain rounded-lg"
-                sizes="90vw"
-                unoptimized={selected.src.startsWith('http')}
-              />
-              {/* Caption */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-lg">
-                <p className="text-white text-sm font-medium">{selected.project}</p>
-                <p className="text-white/60 text-xs">{selected.alt}</p>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {/* Index number */}
+            <div className="absolute top-6 right-6 font-mono text-ghost/15 text-6xl font-bold">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+          </div>
+        ))}
+
+        {/* Trailing spacer */}
+        <div className="flex-shrink-0 w-[20vw]" />
+      </div>
+
+      {/* Competency pills — pinned at bottom */}
+      <div className="absolute bottom-0 left-0 w-full z-10 pb-8 px-6 pointer-events-none">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-start gap-3">
+          <span className="px-4 py-2 border border-ghost/10 rounded-full text-[10px] uppercase tracking-widest text-ghost/40 font-mono backdrop-blur-sm bg-void/40">
+            Sony FX6
+          </span>
+          <span className="px-4 py-2 border border-ghost/10 rounded-full text-[10px] uppercase tracking-widest text-ghost/40 font-mono backdrop-blur-sm bg-void/40">
+            Stop Motion
+          </span>
+          <span className="px-4 py-2 border border-ghost/10 rounded-full text-[10px] uppercase tracking-widest text-ghost/40 font-mono backdrop-blur-sm bg-void/40">
+            Studio Tabletop
+          </span>
+          <span className="px-4 py-2 border border-ghost/10 rounded-full text-[10px] uppercase tracking-widest text-ghost/40 font-mono backdrop-blur-sm bg-void/40">
+            Adobe Premiere / Photoshop
+          </span>
+        </div>
+      </div>
     </section>
   );
 };
