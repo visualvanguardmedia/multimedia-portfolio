@@ -39,10 +39,10 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ video, onClick, className
                     <p className="text-white/70 text-xs tracking-[0.2em] font-light uppercase mb-2">
                         {video.category}
                     </p>
-                    <h3 className="text-white text-xl font-[family-name:var(--font-playfair)] tracking-wide">
+                    <h3 className="text-ghost text-xl font-sans font-bold tracking-tight">
                         {video.title}
                     </h3>
-                    <p className="text-white/50 text-sm mt-2 font-light">
+                    <p className="text-ghost/50 text-sm mt-2 font-light">
                         {video.role}
                     </p>
                 </div>

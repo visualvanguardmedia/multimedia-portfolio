@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Syne, Fraunces, Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  style: ["normal", "italic"],
+});
+
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 const banilu = localFont({
@@ -56,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${banilu.variable} antialiased`}
+        className={`${syne.variable} ${fraunces.variable} ${spaceMono.variable} ${banilu.variable} antialiased`}
       >
         {children}
         <Script

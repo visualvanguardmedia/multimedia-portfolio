@@ -34,7 +34,7 @@ const StillsGallery: React.FC = () => {
   };
 
   return (
-    <section id="photography" className="py-20 sm:py-28 bg-black">
+    <section id="photography" className="py-20 sm:py-28 bg-void">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -44,19 +44,19 @@ const StillsGallery: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-white mb-4">
-            Stills & Tabletop
+          <h2 className="font-sans text-4xl sm:text-5xl font-bold text-ghost mb-4 tracking-tight">
+            Stills &amp; Tabletop
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto text-lg mb-8">
+          <p className="text-ghost/50 max-w-2xl mx-auto text-lg mb-8">
             Product, portrait, and selected frames — captured and finished for brand use.
           </p>
 
           {/* Competencies integrated into design based on job requirements */}
           <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Sony FX6</span>
-            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Stop Motion</span>
-            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Studio Tabletop</span>
-            <span className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest text-white/70">Adobe Premiere / Photoshop</span>
+            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Sony FX6</span>
+            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Stop Motion</span>
+            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Studio Tabletop</span>
+            <span className="px-4 py-2 border border-ghost/20 rounded-full text-xs uppercase tracking-widest text-ghost/70 font-mono">Adobe Premiere / Photoshop</span>
           </div>
         </motion.div>
 
@@ -72,9 +72,9 @@ const StillsGallery: React.FC = () => {
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`text-sm uppercase tracking-wider transition-all pb-1 border-b-2 ${activeFilter === category
-                  ? 'text-white border-white'
-                  : 'text-white/40 border-transparent hover:text-white/70'
+              className={`text-sm uppercase tracking-wider transition-all pb-1 border-b-2 font-sans ${activeFilter === category
+                  ? 'text-ghost border-accent'
+                  : 'text-ghost/40 border-transparent hover:text-ghost/70'
                 }`}
             >
               {category}
@@ -92,7 +92,7 @@ const StillsGallery: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               onClick={() => setSelected(still)}
-              className="group relative aspect-[3/2] overflow-hidden bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-black"
+              className="group relative aspect-[3/2] overflow-hidden bg-primary focus:outline-none focus:ring-2 focus:ring-ghost/30 focus:ring-offset-2 focus:ring-offset-void"
               aria-label={`View photo: ${still.alt}`}
             >
               <Image
@@ -120,10 +120,10 @@ const StillsGallery: React.FC = () => {
             animate={{ opacity: 1 }}
             className="text-center py-16"
           >
-            <p className="text-white/50 text-lg">No photos in this category yet.</p>
+            <p className="text-ghost/50 text-lg">No photos in this category yet.</p>
             <button
               onClick={() => setActiveFilter('All')}
-              className="mt-4 text-white hover:text-[var(--warm-accent)] text-sm underline underline-offset-4"
+              className="mt-4 text-ghost hover:text-accent text-sm underline underline-offset-4"
             >
               View all
             </button>

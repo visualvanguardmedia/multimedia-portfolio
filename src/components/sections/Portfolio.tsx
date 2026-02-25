@@ -29,7 +29,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 sm:py-28 bg-black">
+    <section id="portfolio" className="py-20 sm:py-28 bg-void">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -39,10 +39,10 @@ const Portfolio: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-white mb-4">
-            Direction & Post
+          <h2 className="font-sans text-4xl sm:text-5xl font-bold text-ghost mb-4 tracking-tight">
+            Direction &amp; Post
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto text-lg font-light tracking-wide">
+          <p className="text-ghost/50 max-w-2xl mx-auto text-lg font-light tracking-wide">
             Cinematography, Studio Stop Motion, and Editorial across documentary, commercial, and social formats.
           </p>
         </motion.div>

@@ -1,31 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  
-  /* Neutral Palette with Warm Accent */
-  --warm-accent: #C8A882;
-  --warm-accent-light: #D4BA9A;
-  --warm-accent-dim: #A08A6E;
+  --background: #08080C;
+  --foreground: #F0F0F0;
+  --color-void: #08080C;
+  --color-primary: #111111;
+  --color-accent: #C4943D;
+  --color-ghost: #F0F0F0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  --color-void: #08080C;
+  --color-primary: #111111;
+  --color-accent: #C4943D;
+  --color-ghost: #F0F0F0;
+  --color-paper: #FAFAFA;
+  --font-sans: var(--font-syne);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-space-mono);
   --font-display: var(--font-playfair);
-  
-  /* Minimalist Color System */
-  --color-warm: var(--warm-accent);
-  --color-warm-light: var(--warm-accent-light);
-  --color-warm-dim: var(--warm-accent-dim);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--color-void);
+  color: var(--color-ghost);
+  font-family: var(--font-syne), 'Syne', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(240, 240, 240, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(240, 240, 240, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(240, 240, 240, 0); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-void);
 }
 
 /* Mobile scroll and modal optimizations */

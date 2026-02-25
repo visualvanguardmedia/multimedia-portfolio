@@ -20,7 +20,7 @@ const About: React.FC = () => {
   const current = testimonials[testimonialIndex];
 
   return (
-    <section id="about" className="py-20 sm:py-28 bg-slate-900">
+    <section id="about" className="py-20 sm:py-28 bg-primary">
       <div className="max-w-5xl mx-auto px-6">
         {/* Section heading */}
         <motion.div
@@ -30,10 +30,10 @@ const About: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="font-sans font-bold text-4xl sm:text-5xl text-ghost mb-6 tracking-tight">
             {aboutContent.heading}
           </h2>
-          <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-ghost/70 max-w-3xl mx-auto leading-relaxed">
             {aboutContent.bio}
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ const About: React.FC = () => {
           {aboutContent.services.map((service: string) => (
             <span
               key={service}
-              className="px-4 py-2 border border-slate-700 rounded-full text-sm text-slate-400 hover:border-slate-500 hover:text-white transition-colors"
+              className="px-4 py-2 border border-ghost/15 rounded-full text-sm text-ghost/60 hover:border-accent hover:text-ghost transition-colors"
             >
               {service}
             </span>
@@ -64,14 +64,14 @@ const About: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center mb-20"
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-slate-500 mb-6">
+          <p className="text-xs uppercase tracking-[0.2em] text-ghost/40 font-mono mb-6">
             Trusted By
           </p>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
             {aboutContent.clients.map((client: string) => (
               <span
                 key={client}
-                className="text-slate-400 text-sm sm:text-base font-medium hover:text-white transition-colors"
+                className="text-ghost/60 text-sm sm:text-base font-medium hover:text-accent transition-colors"
               >
                 {client}
               </span>
@@ -87,8 +87,8 @@ const About: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative max-w-3xl mx-auto"
         >
-          <div className="bg-slate-800/40 border border-slate-800 rounded-xl p-8 sm:p-10 relative">
-            <Quote className="absolute top-6 left-6 w-8 h-8 text-[var(--warm-accent)]/30" />
+          <div className="bg-void/60 border border-ghost/10 rounded-[2rem] p-8 sm:p-10 relative">
+            <Quote className="absolute top-6 left-6 w-8 h-8 text-accent/30" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -99,12 +99,12 @@ const About: React.FC = () => {
                 transition={{ duration: 0.35 }}
                 className="text-center"
               >
-                <blockquote className="text-lg sm:text-xl text-slate-200 italic leading-relaxed mb-6">
+                <blockquote className="text-lg sm:text-xl text-ghost font-serif italic leading-relaxed mb-6">
                   &ldquo;{current.quote}&rdquo;
                 </blockquote>
                 <div>
-                  <p className="text-white font-semibold">{current.name}</p>
-                  <p className="text-slate-500 text-sm">
+                  <p className="text-ghost font-semibold">{current.name}</p>
+                  <p className="text-ghost/50 text-sm">
                     {current.role}, {current.company}
                   </p>
                 </div>
@@ -114,14 +114,14 @@ const About: React.FC = () => {
             {/* Nav arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-white transition-colors"
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-ghost/40 hover:text-ghost transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextTestimonial}
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-white transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-ghost/40 hover:text-ghost transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
@@ -136,8 +136,8 @@ const About: React.FC = () => {
                 onClick={() => setTestimonialIndex(i)}
                 className={`w-1.5 h-1.5 rounded-full transition-all ${
                   i === testimonialIndex
-                    ? 'bg-white w-4'
-                    : 'bg-slate-700 hover:bg-slate-600'
+                    ? 'bg-ghost w-4'
+                    : 'bg-ghost/20 hover:bg-ghost/40'
                 }`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />

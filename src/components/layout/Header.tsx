@@ -1,109 +1,72 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { smoothScrollTo } from '@/lib/utils';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        start: 'top -50',
+        onUpdate: (self) => {
+          if (!navRef.current) return;
+          if (self.progress > 0) {
+            gsap.to(navRef.current, {
+              backgroundColor: 'rgba(17, 17, 17, 0.6)',
+              backdropFilter: 'blur(16px)',
+              borderColor: 'rgba(240, 240, 240, 0.1)',
+              duration: 0.3,
+              ease: 'power2.out',
+            });
+          } else {
+            gsap.to(navRef.current, {
+              backgroundColor: 'transparent',
+              backdropFilter: 'blur(0px)',
+              borderColor: 'transparent',
+              duration: 0.3,
+              ease: 'power2.out',
+            });
+          }
+        },
+      });
+    }, navRef);
+    return () => ctx.revert();
   }, []);
 
-  const navigationItems = [
-    { label: 'Work', href: '#portfolio' },
-    { label: 'Stills', href: '#stills' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-  ];
-
-  const handleNavClick = (href: string) => {
-    smoothScrollTo(href);
-    setIsMobileMenuOpen(false);
+  const scrollTo = (id: string) => {
+    const el = document.querySelector(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <header
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${isScrolled
-          ? 'bg-black/90 backdrop-blur-md border-b border-white/10'
-          : 'bg-transparent'
-        }`}
+    <nav
+      ref={navRef}
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-6 py-3 rounded-[3rem] border border-transparent transition-all duration-300 w-[90%] max-w-4xl"
     >
-      <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo / Name */}
-          <button
-            onClick={() => handleNavClick('#hero')}
-            className="focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg p-1 -m-1 group"
-            aria-label="Go to homepage"
-          >
-            <span className="text-white font-semibold tracking-wide text-sm uppercase group-hover:text-[var(--warm-accent)] transition-colors">
-              Jim Elli
-            </span>
-          </button>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
-            {navigationItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => handleNavClick(item.href)}
-                className="text-slate-400 hover:text-white transition-colors text-sm tracking-wide focus:outline-none focus:text-white"
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-
-          {/* CTA - Desktop */}
-          <div className="hidden md:block">
-            <button
-              onClick={() => handleNavClick('#contact')}
-              className="text-sm text-white hover:text-[var(--warm-accent)] transition-colors border border-slate-600 hover:border-[var(--warm-accent)] px-4 py-2 rounded-lg"
-            >
-              Get In Touch
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden w-10 h-10 flex items-center justify-center text-white hover:text-[var(--warm-accent)] transition-colors focus:outline-none"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 py-4 border-t border-white/10">
-            <div className="flex flex-col space-y-4">
-              {navigationItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-white/70 hover:text-white transition-colors text-sm text-left focus:outline-none uppercase tracking-widest"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </nav>
-        )}
+      <div className="font-sans font-bold text-lg tracking-tight uppercase text-ghost">
+        Visual Vanguard
       </div>
-    </header>
+      <div className="hidden md:flex items-center gap-8 font-sans text-sm tracking-wide text-ghost">
+        <button onClick={() => scrollTo('#work')} className="hover:-translate-y-[1px] transition-transform">Work</button>
+        <button onClick={() => scrollTo('#photography')} className="hover:-translate-y-[1px] transition-transform">Photography</button>
+        <button onClick={() => scrollTo('#about')} className="hover:-translate-y-[1px] transition-transform">About</button>
+      </div>
+      <button
+        onClick={() => scrollTo('#contact')}
+        className="relative overflow-hidden group bg-accent text-primary px-5 py-2 rounded-[2rem] font-sans text-sm font-bold uppercase tracking-wider hover:scale-[1.03] transition-transform duration-300"
+        style={{ transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}
+      >
+        <span className="relative z-10 transition-colors group-hover:text-void">Let&apos;s Talk</span>
+        <span className="absolute inset-0 bg-ghost translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></span>
+      </button>
+    </nav>
   );
 };
 

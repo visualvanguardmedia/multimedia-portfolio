@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative w-full h-[100dvh] overflow-hidden bg-void flex items-end"
     >
       {/* Background stills carousel */}
       <AnimatePresence mode="sync">
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
       </AnimatePresence>
 
       {/* Dark scrim overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-transparent" />
 
       {/* Film grain texture */}
       <div
@@ -62,90 +62,55 @@ const Hero: React.FC = () => {
         }}
       />
 
-      {/* Content overlay */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        {/* Name */}
-        <motion.h1
+      {/* Content — bottom-aligned cinematic layout */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-32 flex flex-col items-start">
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-[family-name:var(--font-playfair)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white tracking-tight mb-6"
+          transition={{ duration: 1, delay: 0.2 }}
+          className="font-mono text-accent text-xs md:text-sm tracking-widest uppercase mb-6"
         >
-          {heroContent.name}
+          Directed by {heroContent.name}
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.35 }}
+          className="text-ghost leading-[0.9] mb-8"
+        >
+          <span className="block font-sans font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight">Authenticity</span>
+          <span className="block font-serif italic text-6xl md:text-8xl lg:text-[10rem] md:ml-12 text-accent">in motion.</span>
         </motion.h1>
 
-        {/* Title */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-lg sm:text-xl md:text-2xl text-white/70 tracking-[0.2em] uppercase font-light mb-4"
-        >
-          {heroContent.title}
-        </motion.p>
-
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.65 }}
-          className="text-base sm:text-lg text-white/50 max-w-xl mx-auto mb-12"
-        >
-          {heroContent.tagline}
-        </motion.p>
-
-        {/* CTAs */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20"
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mt-4"
         >
           <button
-            onClick={() => smoothScrollTo('#portfolio')}
-            className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white hover:text-gray-300 transition-colors border-b border-white/40 hover:border-white pb-1"
+            onClick={() => smoothScrollTo('#work')}
+            className="relative overflow-hidden group bg-ghost text-void px-8 py-4 rounded-[3rem] font-sans text-sm font-bold uppercase tracking-wider hover:scale-[1.03] transition-transform duration-300 shadow-xl"
+            style={{ transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}
           >
-            View Reel
+            <span className="relative z-10 transition-colors group-hover:text-primary">View My Work</span>
+            <span className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"></span>
           </button>
-          <button
-            onClick={() => smoothScrollTo('#contact')}
-            className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors border-b border-transparent hover:border-white/60 pb-1"
-          >
-            Contact
-          </button>
-        </motion.div>
-
-        {/* Work types */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap"
-        >
-          {['Studio Production', 'Tabletop', 'Stop Motion', 'Editorial', 'Live / Streaming'].map((type, i) => (
-            <span
-              key={type}
-              className="text-xs sm:text-sm text-white/50 uppercase tracking-[0.15em] flex items-center gap-3 sm:gap-4"
-            >
-              {i > 0 && <span className="text-white/20">·</span>}
-              {type}
-            </span>
-          ))}
         </motion.div>
 
         {/* Slide indicators */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="flex justify-center gap-2 mt-10"
+          transition={{ duration: 1, delay: 1 }}
+          className="flex gap-2 mt-12"
         >
           {heroStills.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-0.5 rounded-full transition-all duration-500 ${i === current ? 'w-8 bg-white' : 'w-4 bg-white/30'
-                }`}
+              className={`h-0.5 rounded-full transition-all duration-500 ${i === current ? 'w-8 bg-ghost' : 'w-4 bg-ghost/30'}`}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}
