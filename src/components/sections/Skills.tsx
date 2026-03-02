@@ -37,7 +37,7 @@ const Skills: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
         {/* Documentary */}
         <div className="feature-card group relative flex flex-col justify-end overflow-hidden bg-primary border border-ghost/10 rounded-[2rem] shadow-2xl h-[400px] lg:h-[500px] cursor-pointer">
-          <img src="https://i.ytimg.com/vi/c5in5xNJkk0/maxresdefault.jpg" alt="Data Centers Documentary" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" />
+          <img src="/images/uploads/wide-march.webp" alt="Documentary still" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" />
           <div className="absolute inset-0 bg-gradient-to-t from-void via-void/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <div className="w-16 h-16 rounded-full border border-ghost/30 flex items-center justify-center backdrop-blur-md bg-void/30 pulse-glow">
