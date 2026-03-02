@@ -70,6 +70,12 @@ const Process: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+    if (!isDesktop || reduceMotion) return;
+
     const ctx = gsap.context(() => {
       const cards = gsap.utils.toArray('.process-card') as HTMLElement[];
 
@@ -101,7 +107,7 @@ const Process: React.FC = () => {
       {steps.map((step, index) => (
         <div
           key={index}
-          className="process-card h-screen w-full flex items-center justify-center sticky top-0 bg-void border-t border-ghost/5 shadow-2xl overflow-hidden"
+          className="process-card md:h-screen w-full flex items-center justify-center md:sticky md:top-0 bg-void border-t border-ghost/5 shadow-2xl overflow-hidden py-20 md:py-0"
         >
           <div className="absolute inset-0 bg-primary opacity-50 mix-blend-multiply" />
           <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
