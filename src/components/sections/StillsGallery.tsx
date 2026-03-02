@@ -1,60 +1,55 @@
 'use client';
 
-import React, { useEffect, useRef, useMemo } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
+import { X } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { stills } from '@/data/stills';
+import { stills, Still } from '@/data/stills';
+import MobileModalManager from '@/components/ui/MobileModalManager';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-/**
- * Interleave stills so no two consecutive images share the same project.
- * Highlights diverse skills rather than batching by category.
- */
-function interleaveStills(items: typeof stills) {
-  const buckets: Record<string, typeof stills> = {};
+type StillsShoot = {
+  project: string;
+  category?: Still['category'];
+  hero: Still;
+  stills: Still[];
+};
+
+function buildShoots(items: Still[]): StillsShoot[] {
+  const map = new Map<string, Still[]>();
   for (const s of items) {
     const key = s.project;
-    if (!buckets[key]) buckets[key] = [];
-    buckets[key].push(s);
+    map.set(key, [...(map.get(key) ?? []), s]);
   }
 
-  const keys = Object.keys(buckets).sort((a, b) => buckets[b].length - buckets[a].length);
-  const result: typeof stills = [];
-  let lastProject = '';
-
-  while (keys.some((k) => buckets[k].length > 0)) {
-    let placed = false;
-    for (const key of keys) {
-      if (buckets[key].length > 0 && key !== lastProject) {
-        result.push(buckets[key].shift()!);
-        lastProject = key;
-        placed = true;
-        break;
-      }
-    }
-    if (!placed) {
-      for (const key of keys) {
-        if (buckets[key].length > 0) {
-          result.push(buckets[key].shift()!);
-          lastProject = key;
-          break;
-        }
-      }
-    }
+  const shoots: StillsShoot[] = [];
+  for (const [project, group] of map.entries()) {
+    const hero = group.find((s) => s.featured) ?? group[0];
+    shoots.push({
+      project,
+      category: hero.category,
+      hero,
+      stills: group,
+    });
   }
 
-  return result;
+  // Keep original order based on first appearance in stills.json
+  shoots.sort((a, b) => items.findIndex((s) => s.project === a.project) - items.findIndex((s) => s.project === b.project));
+  return shoots;
 }
 
 const StillsGallery: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  const interleaved = useMemo(() => interleaveStills([...stills]), []);
+  const shoots = useMemo(() => buildShoots(stills as Still[]), []);
+
+  const [activeShoot, setActiveShoot] = useState<StillsShoot | null>(null);
+  const isModalOpen = Boolean(activeShoot);
 
   useEffect(() => {
     if (!sectionRef.current || !trackRef.current) return;
@@ -66,7 +61,6 @@ const StillsGallery: React.FC = () => {
     const ctx = gsap.context(() => {
       const track = trackRef.current!;
       const scrollWidth = track.scrollWidth - window.innerWidth;
-
       if (scrollWidth <= 0) return;
 
       gsap.to(track, {
@@ -84,10 +78,62 @@ const StillsGallery: React.FC = () => {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, [interleaved]);
+  }, [shoots.length]);
 
   return (
     <section ref={sectionRef} id="photography" className="relative bg-void overflow-hidden">
+      <MobileModalManager
+        isOpen={isModalOpen}
+        onClose={() => setActiveShoot(null)}
+        enableSwipeClose={true}
+        id="stills-shoot-modal"
+        ariaLabel={activeShoot ? `${activeShoot.project} — full shoot` : 'Full shoot'}
+        modalClassName="max-h-[92vh] overflow-y-auto"
+      >
+        <button
+          onClick={() => setActiveShoot(null)}
+          className="absolute top-4 right-4 z-10 w-10 h-10 bg-void/70 hover:bg-void/90 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-ghost/40 backdrop-blur-sm border border-ghost/10"
+          aria-label="Close photo shoot"
+        >
+          <X className="w-5 h-5 text-ghost" />
+        </button>
+
+        <div className="p-6" data-scrollable="true">
+          <div className="mb-6 pr-10">
+            <p className="font-mono text-xs tracking-widest uppercase text-accent mb-3">Full Shoot</p>
+            <h3 className="font-sans font-bold text-2xl md:text-3xl text-ghost tracking-tight">
+              {activeShoot?.project}
+            </h3>
+            <p className="text-ghost/50 mt-2">
+              {activeShoot?.stills.length ?? 0} frames
+              {activeShoot?.category ? ` · ${activeShoot.category}` : ''}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {(activeShoot?.stills ?? []).map((s) => (
+              <div
+                key={s.id}
+                className="relative aspect-[3/2] rounded-[1.5rem] overflow-hidden bg-primary border border-ghost/10"
+              >
+                <Image
+                  src={s.src}
+                  alt={s.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 90vw, 45vw"
+                  unoptimized={s.src.startsWith('http')}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <p className="text-ghost text-sm font-medium">{s.alt}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </MobileModalManager>
+
       {/* Header */}
       <div className="px-6 pt-20 pb-8 md:absolute md:top-0 md:left-0 md:w-full md:z-10 md:pointer-events-none">
         <div className="max-w-7xl mx-auto flex items-end justify-between">
@@ -96,7 +142,7 @@ const StillsGallery: React.FC = () => {
               Stills &amp; Tabletop
             </h2>
             <p className="text-ghost/50 text-lg mt-2">
-              Product, portrait, and selected frames — captured and finished for brand use.
+              One hero frame from each shoot — click to view the full set.
             </p>
           </div>
           <div className="hidden md:flex items-center gap-3 text-ghost/30 font-mono text-xs uppercase tracking-widest">
@@ -116,38 +162,43 @@ const StillsGallery: React.FC = () => {
       >
         <div className="hidden md:block flex-shrink-0 w-[30vw]" />
 
-        {interleaved.map((still, index) => (
-          <div
-            key={still.id}
-            className="still-card snap-center group relative flex-shrink-0 rounded-[2rem] overflow-hidden bg-primary border border-ghost/10 shadow-2xl w-[85vw] sm:w-[70vw] md:w-[55vw] md:max-w-[800px] h-[60vh] md:h-[70vh]"
+        {shoots.map((shoot, index) => (
+          <button
+            key={shoot.project}
+            onClick={() => setActiveShoot(shoot)}
+            className="still-card snap-center group relative flex-shrink-0 rounded-[2rem] overflow-hidden bg-primary border border-ghost/10 shadow-2xl w-[85vw] sm:w-[70vw] md:w-[55vw] md:max-w-[800px] h-[60vh] md:h-[70vh] text-left"
+            aria-label={`View full shoot: ${shoot.project}`}
           >
             <Image
-              src={still.src}
-              alt={still.alt}
+              src={shoot.hero.src}
+              alt={shoot.hero.alt}
               fill
               className="object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105"
               sizes="(max-width: 768px) 85vw, 55vw"
-              unoptimized={still.src.startsWith('http')}
+              unoptimized={shoot.hero.src.startsWith('http')}
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
 
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
               <span className="inline-block px-3 py-1 mb-3 text-[10px] uppercase font-mono tracking-widest border border-ghost/20 rounded-full text-ghost/70">
-                {still.category ?? 'Frame'}
+                {shoot.category ?? 'Frame'} · {shoot.stills.length}
               </span>
               <h3 className="font-sans font-bold text-xl md:text-2xl text-ghost mb-1">
-                {still.project}
+                {shoot.project}
               </h3>
               <p className="font-sans text-sm text-ghost/50 opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                {still.alt}
+                {shoot.hero.alt}
+              </p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-ghost/50 mt-3">
+                Tap to view full shoot
               </p>
             </div>
 
             <div className="absolute top-6 right-6 font-mono text-ghost/15 text-6xl font-bold">
               {String(index + 1).padStart(2, '0')}
             </div>
-          </div>
+          </button>
         ))}
 
         <div className="hidden md:block flex-shrink-0 w-[20vw]" />

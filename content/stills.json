@@ -5,7 +5,8 @@
       "src": "/images/photography/cann-product-hero.jpg",
       "alt": "CANN Social Tonic — product hero (tabletop photography)",
       "project": "CANN — Product Photography",
-      "category": "Product"
+      "category": "Product",
+      "featured": true
     },
     {
       "id": "cann-2",
@@ -40,7 +41,8 @@
       "src": "/images/photography/nike-savaleos-hero.jpg",
       "alt": "Nike Savaleos — dramatic side profile (studio lighting)",
       "project": "Nike Savaleos — Product Photography",
-      "category": "Product"
+      "category": "Product",
+      "featured": true
     },
     {
       "id": "nike-2",
@@ -61,7 +63,8 @@
       "src": "/images/photography/minerva-headshots/minerva-headshot-01.jpg",
       "alt": "Corporate headshot — natural light portrait",
       "project": "Minerva Psychology — Headshots",
-      "category": "Portrait"
+      "category": "Portrait",
+      "featured": true
     },
     {
       "id": "minerva-2",
@@ -82,7 +85,8 @@
       "src": "/images/uploads/john-2.webp",
       "alt": "Livestream — union event (frame grab)",
       "project": "Breakthrough News Minnesota General Strike",
-      "category": "Frame"
+      "category": "Frame",
+      "featured": true
     }
   ]
 }
